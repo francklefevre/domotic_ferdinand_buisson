@@ -1,0 +1,129 @@
+info  2023-02-22 20:42:09: Logging to console and directory: '/app/data/log/2023-02-22.20-42-09' filename: log.txt
+info  2023-02-22 20:42:09: Starting Zigbee2MQTT version 1.28.4 (commit #52e545f)
+info  2023-02-22 20:42:09: Starting zigbee-herdsman (0.14.76)
+info  2023-02-22 20:42:13: zigbee-herdsman started (resumed)
+info  2023-02-22 20:42:13: Coordinator firmware version: '{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20210708,"transportrev":2},"type":"zStack3x0"}'
+info  2023-02-22 20:42:13: Currently 26 devices are joined:
+info  2023-02-22 20:42:13: P001 (0x00158d00058a83de): RTCGQ11LM - Xiaomi Aqara human body movement and illuminance sensor (EndDevice)
+info  2023-02-22 20:42:13: R001 (0x00158d00058e1586): LLKZMK11LM - Xiaomi Aqara wireless relay controller (Router)
+info  2023-02-22 20:42:13: A001 (0x00158d00053039d3): ZNLDP12LM - Xiaomi Aqara smart LED bulb (Router)
+info  2023-02-22 20:42:13: A002 (0x00158d000520ad81): ZNLDP12LM - Xiaomi Aqara smart LED bulb (Router)
+info  2023-02-22 20:42:13: I001 (0x00158d000456c6aa): WXKG03LM_rev2 - Xiaomi Aqara single key wireless wall switch (2018 model) (EndDevice)
+info  2023-02-22 20:42:13: I002 (0x00158d00045500bb): WXKG03LM_rev2 - Xiaomi Aqara single key wireless wall switch (2018 model) (EndDevice)
+info  2023-02-22 20:42:13: R002 (0x00158d00058e159d): LLKZMK11LM - Xiaomi Aqara wireless relay controller (Router)
+info  2023-02-22 20:42:13: I003 (0x00158d000464fbc6): WXKG03LM_rev2 - Xiaomi Aqara single key wireless wall switch (2018 model) (EndDevice)
+info  2023-02-22 20:42:13: P002 (0x00158d0005827863): RTCGQ11LM - Xiaomi Aqara human body movement and illuminance sensor (EndDevice)
+info  2023-02-22 20:42:13: A003 (0x000d6ffffe0538f7): LED1624G9 - IKEA TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white (Router)
+info  2023-02-22 20:42:13: X001 (0x000d6ffffe0e6cfb): E1524/E1810 - IKEA TRADFRI remote control (EndDevice)
+info  2023-02-22 20:42:13: A004 (0x000d6ffffe055141): LED1624G9 - IKEA TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white (Router)
+info  2023-02-22 20:42:13: A005 (0x000d6ffffe0e8e2c): LED1624G9 - IKEA TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white (Router)
+info  2023-02-22 20:42:13: I004 (0x00158d00046516c8): WXKG03LM_rev2 - Xiaomi Aqara single key wireless wall switch (2018 model) (EndDevice)
+info  2023-02-22 20:42:13: A006 (0x00158d000520ef8d): ZNLDP12LM - Xiaomi Aqara smart LED bulb (Router)
+info  2023-02-22 20:42:13: A007 (0x00158d0005730fc6): ZNLDP12LM - Xiaomi Aqara smart LED bulb (Router)
+info  2023-02-22 20:42:13: I005 (0x00158d0003facd3d): WXKG03LM_rev2 - Xiaomi Aqara single key wireless wall switch (2018 model) (EndDevice)
+info  2023-02-22 20:42:13: A008 (0x00158d000520f1b2): ZNLDP12LM - Xiaomi Aqara smart LED bulb (Router)
+info  2023-02-22 20:42:13: C001 (0x00158d00054b89f1): MFKZQ01LM - Xiaomi Mi/Aqara smart home cube (EndDevice)
+info  2023-02-22 20:42:13: L001 (0x003c84fffec3e3da): HG06104A - Lidl Livarno Lux smart LED light strip 2.5m (Router)
+info  2023-02-22 20:42:13: A009 (0xcc86ecfffe1e71e3): HG06492C - Lidl Livarno Lux E27 bulb CCT (Router)
+info  2023-02-22 20:42:13: P003 (0x2c1165fffe8405f6): HG06335/HG07310 - Lidl Silvercrest smart motion sensor (EndDevice)
+info  2023-02-22 20:42:13: A010 (0x2c1165fffec74eff): HG07834B - Lidl Livarno Lux E14 candle RGB (Router)
+info  2023-02-22 20:42:13: A011 (0x0017880102d22996): 8718696449691 - Philips Hue White A60 Single bulb E27/B22 (Router)
+info  2023-02-22 20:42:13: 0xf0d1b800001f6cb3 (0xf0d1b800001f6cb3): AC33906 - LEDVANCE SMART+ spot GU10 multicolor RGBW (Router)
+info  2023-02-22 20:42:13: R003 (0xa4c1389b82055bd6): WHD02 - TuYa Wall switch module (Router)
+warn  2023-02-22 20:42:13: `permit_join` set to  `true` in configuration.yaml.
+warn  2023-02-22 20:42:13: Allowing new devices to join.
+warn  2023-02-22 20:42:13: Set `permit_join` to `false` once you joined all devices.
+info  2023-02-22 20:42:13: Zigbee: allowing new devices to join.
+info  2023-02-22 20:42:14: Connecting to MQTT server at mqtt://mqtt
+info  2023-02-22 20:42:14: Connected to MQTT server
+info  2023-02-22 20:42:14: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload '{"state":"online"}'
+info  2023-02-22 20:42:14: MQTT publish: topic 'zigbee2mqtt/901/availability', payload '{"state":"online"}'
+info  2023-02-22 20:42:15: Started frontend on port 0.0.0.0:8080
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/P001', payload '{"battery":100,"device_temperature":15,"illuminance":3,"illuminance_lux":3,"linkquality":6,"occupancy":false,"power_outage_count":16,"voltage":3075}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/R001', payload '{"consumption":0.19,"current":0.005,"device_temperature":22,"energy":0.19,"linkquality":33,"power":0,"power_outage_count":17,"state_l1":"ON","state_l2":"ON","update":{"state":"idle"},"voltage":230.5}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/A001', payload '{"brightness":229,"color_mode":"color_temp","color_temp":327,"linkquality":87,"state":"OFF"}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/A002', payload '{"brightness":229,"color_mode":"color_temp","color_temp":327,"linkquality":87,"state":"OFF"}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/I001', payload '{"battery":3,"device_temperature":23,"linkquality":51,"power_outage_count":31,"voltage":2855}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/I002', payload '{"battery":100,"device_temperature":20,"linkquality":51,"power_outage_count":5680,"voltage":3305}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":54,"power":0,"power_outage_count":44,"state_l1":"OFF","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/I003', payload '{"battery":100,"device_temperature":20,"linkquality":48,"power_outage_count":122,"voltage":3065}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":21,"illuminance":0,"illuminance_lux":0,"linkquality":57,"occupancy":false,"power_outage_count":14,"voltage":3015}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/A003', payload '{"brightness":254,"color":{"x":0.6184,"y":0.369},"color_mode":"xy","color_temp":454,"linkquality":45,"state":"OFF","update":{"state":"idle"}}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/X001', payload '{"battery":21,"linkquality":57,"update":{"state":"available"}}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/A004', payload '{"brightness":254,"color":{"x":0.6184,"y":0.369},"color_mode":"xy","color_temp":454,"linkquality":0,"state":"OFF","update":{"state":"idle"}}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/A005', payload '{"brightness":254,"color":{"x":0.6184,"y":0.369},"color_mode":"xy","color_temp":454,"linkquality":42,"state":"OFF","update":{"state":"idle"}}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/I004', payload '{"battery":83,"device_temperature":28,"linkquality":63,"power_outage_count":25,"voltage":2975}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/A006', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":78,"state":"OFF","update":{"state":"available"}}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/A007', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":75,"state":"OFF","update":{"state":"available"}}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/I005', payload '{"battery":100,"device_temperature":21,"linkquality":75,"power_outage_count":17,"voltage":3025}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/A008', payload '{"brightness":254,"color_mode":"color_temp","color_temp":370,"linkquality":78,"state":"ON"}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/C001', payload '{"battery":77,"current":0,"device_temperature":18,"linkquality":75,"power":1987,"power_outage_count":150,"side":1,"voltage":2965}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/L001', payload '{"brightness":56,"color":{"x":0.5405,"y":0.2395},"color_mode":"xy","color_temp":132,"linkquality":0,"state":"ON"}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/A009', payload '{"brightness":51,"color_mode":"color_temp","color_temp":370,"linkquality":3,"state":"ON"}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/P003', payload '{"battery":100,"battery_low":false,"linkquality":36,"occupancy":true,"tamper":false,"voltage":3200}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/A010', payload '{"brightness":60,"color":{"x":0.5164,"y":0.3138},"color_mode":"xy","linkquality":0,"state":"ON"}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/A011', payload '{"brightness":108,"linkquality":33,"state":"ON"}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/0xf0d1b800001f6cb3', payload '{"brightness":254,"color":{"x":0.4519,"y":0.4086},"color_mode":"color_temp","color_temp":356,"linkquality":18,"state":"ON","update":{"state":"idle"}}'
+info  2023-02-22 20:42:15: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"state":"OFF"}'
+info  2023-02-22 20:42:15: Zigbee2MQTT started!
+error 2023-02-22 20:42:36: No converter available for 'relay' ("1")
+error 2023-02-22 20:42:36: No converter available for 'state1' ("ON")
+error 2023-02-22 20:42:38: No converter available for 'relay' ("2")
+error 2023-02-22 20:42:38: No converter available for 'state2' ("ON")
+info  2023-02-22 20:42:54: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":57,"power":0,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:42:54: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":57,"power":0,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:42:55: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":57,"power":9.65,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:42:55: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":60,"power":9.65,"power_outage_count":44,"state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:42:55: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":57,"power":9.65,"power_outage_count":44,"state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:42:56: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":57,"power":9.65,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:42:56: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":57,"power":9.65,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:42:57: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":54,"power":43.23,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:42:58: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":57,"power":43.23,"power_outage_count":44,"state_l1":"OFF","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:42:58: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":54,"power":43.23,"power_outage_count":44,"state_l1":"OFF","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:42:59: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":57,"power":43.23,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:42:59: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":57,"power":43.23,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:42:59: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":57,"power":15.82,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:42:59: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":54,"power":15.82,"power_outage_count":44,"state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:42:59: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":51,"power":15.82,"power_outage_count":44,"state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:01: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":54,"power":51.86,"power_outage_count":44,"state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:03: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":51,"power":51.86,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:03: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":54,"power":68.27,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:03: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":51,"power":68.27,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:04: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":51,"power":68.27,"power_outage_count":44,"state_l1":"OFF","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:04: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":54,"power":68.27,"power_outage_count":44,"state_l1":"OFF","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:05: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":51,"power":31.2,"power_outage_count":44,"state_l1":"OFF","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:07: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":57,"power":0,"power_outage_count":44,"state_l1":"OFF","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:37: MQTT publish: topic 'zigbee2mqtt/A006', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":75,"state":"OFF","update":{"state":"available"}}'
+error 2023-02-22 20:43:38: No converter available for 'relay' ("1")
+error 2023-02-22 20:43:38: No converter available for 'state1' ("TOGGLE")
+info  2023-02-22 20:43:38: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":54,"power":0,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:38: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":54,"power":0,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:39: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":54,"power":14.01,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+error 2023-02-22 20:43:41: No converter available for 'relay' ("2")
+error 2023-02-22 20:43:41: No converter available for 'state2' ("TOGGLE")
+info  2023-02-22 20:43:41: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":54,"power":14.01,"power_outage_count":44,"state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:41: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":51,"power":14.01,"power_outage_count":44,"state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:41: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":54,"power":33.97,"power_outage_count":44,"state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:43: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":48,"power":68.04,"power_outage_count":44,"state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:46: MQTT publish: topic 'zigbee2mqtt/I003', payload '{"action":"single","battery":100,"device_temperature":20,"linkquality":54,"power_outage_count":122,"voltage":3065}'
+error 2023-02-22 20:43:46: No converter available for 'relay' ("2")
+error 2023-02-22 20:43:46: No converter available for 'state2' ("TOGGLE")
+info  2023-02-22 20:43:46: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":51,"power":68.04,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+error 2023-02-22 20:43:46: No converter available for 'relay' ("1")
+info  2023-02-22 20:43:46: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":51,"power":68.04,"power_outage_count":44,"state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+error 2023-02-22 20:43:46: No converter available for 'state1' ("TOGGLE")
+info  2023-02-22 20:43:46: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":54,"power":68.04,"power_outage_count":44,"state_l1":"OFF","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:46: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":54,"power":68.04,"power_outage_count":44,"state_l1":"OFF","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:47: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":57,"power":10.69,"power_outage_count":44,"state_l1":"OFF","state_l2":"OFF","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:47: MQTT publish: topic 'zigbee2mqtt/I003', payload '{"action":"single","battery":100,"device_temperature":20,"linkquality":57,"power_outage_count":122,"voltage":3065}'
+error 2023-02-22 20:43:47: No converter available for 'relay' ("2")
+error 2023-02-22 20:43:47: No converter available for 'relay' ("1")
+error 2023-02-22 20:43:47: No converter available for 'state2' ("TOGGLE")
+info  2023-02-22 20:43:47: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":57,"power":10.69,"power_outage_count":44,"state_l1":"OFF","state_l2":"ON","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:47: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":57,"power":10.69,"power_outage_count":44,"state_l1":"OFF","state_l2":"ON","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:47: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":60,"power":10.69,"power_outage_count":44,"state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":236.2}'
+error 2023-02-22 20:43:47: No converter available for 'state1' ("TOGGLE")
+info  2023-02-22 20:43:47: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":60,"power":10.69,"power_outage_count":44,"state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:43:49: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.0035,"device_temperature":18,"energy":10.56,"linkquality":48,"power":68.46,"power_outage_count":44,"state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":236.2}'
+info  2023-02-22 20:45:43: MQTT publish: topic 'zigbee2mqtt/A007', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":75,"state":"OFF","update":{"state":"available"}}'
+info  2023-02-22 20:46:24: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":10.56,"current":0.2845,"device_temperature":18,"energy":10.56,"linkquality":54,"power":66.36,"power_outage_count":44,"state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":236.4}'

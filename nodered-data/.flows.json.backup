@@ -1,0 +1,3722 @@
+[
+    {
+        "id": "10dd252317cb822a",
+        "type": "tab",
+        "label": "Maintenance",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f03cfb04ffe21e70",
+        "type": "tab",
+        "label": "Spare",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "469b4b2f6211fe88",
+        "type": "tab",
+        "label": "Veranda",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2f76b69f4fde1323",
+        "type": "tab",
+        "label": "Chambre parents",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f478c30160855d4f",
+        "type": "tab",
+        "label": "Atelier Orange",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2537c1c5.0f952e",
+        "type": "tab",
+        "label": "Mijia Gateway",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "0181e1b26c9ae404",
+        "type": "subflow",
+        "name": "Set relais",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "60bd7563fd9a6177"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [
+            {
+                "name": "relais",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "canal",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "etat",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "d3deb48544895eb1",
+        "type": "subflow",
+        "name": "Bouton double",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "6a0946b089a05462"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 500,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "9e5ed997d81029c8",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 500,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "9e5ed997d81029c8",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "77a5d6919bd23113",
+        "type": "subflow",
+        "name": "Bouton x6",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "e63c9fb3953f6afc"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 540,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "7bcd73ea10601355",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "7bcd73ea10601355",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "7bcd73ea10601355",
+                        "port": 2
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "7bcd73ea10601355",
+                        "port": 3
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "7bcd73ea10601355",
+                        "port": 4
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 340,
+                "wires": [
+                    {
+                        "id": "7bcd73ea10601355",
+                        "port": 5
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "968de947dcf2fcd8",
+        "type": "subflow",
+        "name": "Bouton Simple",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "e80d332108dddf11"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 420,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "e80d332108dddf11",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "01799b7bc5cc6cb8",
+        "type": "subflow",
+        "name": "Set ampoule",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "be0e4ff59fe48e04"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [
+            {
+                "name": "ampoule",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "etat",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "luminosite",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "temperature",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "color",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "00592b45cd933e7c",
+        "type": "subflow",
+        "name": "Detecteur presence",
+        "info": "Ce node envoie un message sur la première sortie à chaque fois qu'une présence est détectée, et un timer est alors (re)lancé.\r\nAu bout de la période de timeout ( 60 s par défautl) sans détection de présence, un message est envoyé sur le seconde sortie.\r\n",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "1ff87cadc3ca34e8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 740,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "1ff87cadc3ca34e8",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 740,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "1ff87cadc3ca34e8",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "timeout",
+                "type": "num",
+                "value": "60"
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "8f9c2451b9d4bd6d",
+        "type": "subflow",
+        "name": "Type appui",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "cfc02862707b37bc"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 400,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "cfc02862707b37bc",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 400,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "cfc02862707b37bc",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 400,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "cfc02862707b37bc",
+                        "port": 2
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "e0854c979f67781c",
+        "type": "subflow",
+        "name": "Cube",
+        "info": "Les sorties possibles sont :\r\n1: shake\r\n2: tap\r\n3: flip90\r\n4: flip180\r\n5: rotate_left\r\n6: rotate_right\r\n",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "66955b86b06d5132"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 540,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "b5f918a04fe4f64b",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "b5f918a04fe4f64b",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "b5f918a04fe4f64b",
+                        "port": 2
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "b5f918a04fe4f64b",
+                        "port": 3
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "b5f918a04fe4f64b",
+                        "port": 4
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 240,
+                "wires": [
+                    {
+                        "id": "b5f918a04fe4f64b",
+                        "port": 5
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "d22a6164a07592ef",
+        "type": "subflow",
+        "name": "Navigate",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "3dd534bdc54e719a"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 340,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "3dd534bdc54e719a",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 340,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "3dd534bdc54e719a",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 340,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "3dd534bdc54e719a",
+                        "port": 2
+                    }
+                ]
+            },
+            {
+                "x": 340,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "3dd534bdc54e719a",
+                        "port": 3
+                    }
+                ]
+            },
+            {
+                "x": 340,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "3dd534bdc54e719a",
+                        "port": 4
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "43acfe3a9b9177ba",
+        "type": "mqtt-broker",
+        "name": "localhost",
+        "broker": "raspberrypi",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "2c7b5a9da06df627",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "k1tests.k1info.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "7be6658fa8d1bfc9",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt.lormauto.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "2be25b20.752014",
+        "type": "mqtt-broker",
+        "name": "Mijia Gateway",
+        "broker": "192.168.86.21",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "60bd7563fd9a6177",
+        "type": "function",
+        "z": "0181e1b26c9ae404",
+        "name": "",
+        "func": "var newstate = msg.payload ;\n\nif (msg.relais == undefined)\n    msg.relais = env.get(\"relais\");\nif (msg.canal == undefined)\n    msg.canal = env.get(\"canal\");\nif (msg.etat == undefined)\n    msg.etat = env.get(\"etat\");\n\nmsg.payload = {} ;\nmsg.payload.relay = msg.canal ;\n//msg.payload[\"state_l\" + msg.payload.relay] = msg.etat;\nmsg.payload[\"state\" + msg.payload.relay] = msg.etat;\nmsg.topic = \"zigbee2mqtt/\" + msg.relais + \"/set\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [
+                "152c4821852e028a"
+            ]
+        ]
+    },
+    {
+        "id": "152c4821852e028a",
+        "type": "mqtt out",
+        "z": "0181e1b26c9ae404",
+        "name": "",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 390,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6a0946b089a05462",
+        "type": "function",
+        "z": "d3deb48544895eb1",
+        "name": "",
+        "func": "if(msg.payload.action == undefined)\n    return ;\n\nif (msg.payload.action.indexOf(\"single_\")>-1)\n    msg.event = \"simple\";\nelse if (msg.payload.action.indexOf(\"double_\")>-1)\n    msg.event = \"double\";\nelse if (msg.payload.action.indexOf(\"hold_\")>-1)\n    msg.event = \"hold\";\n\nif (msg.event != undefined)\n    {\n//    msg.payload = msg.action ;\n    return msg ;\n    }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [
+                "9e5ed997d81029c8"
+            ]
+        ]
+    },
+    {
+        "id": "9e5ed997d81029c8",
+        "type": "switch",
+        "z": "d3deb48544895eb1",
+        "name": "",
+        "property": "payload.action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "_left",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_right",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 370,
+        "y": 80,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e63c9fb3953f6afc",
+        "type": "function",
+        "z": "77a5d6919bd23113",
+        "name": "",
+        "func": "if(msg.payload.action == undefined)\n    return ;\n\nif (msg.payload.action.indexOf(\"_single\")>-1)\n    msg.event = \"simple\";\nelse if (msg.payload.action.indexOf(\"_double\")>-1)\n    msg.event = \"double\";\nelse if (msg.payload.action.indexOf(\"_hold\")>-1)\n    msg.event = \"hold\";\n\nif (msg.event != undefined)\n    {\n//    msg.payload = msg.action ;\n    return msg ;\n    }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 200,
+        "wires": [
+            [
+                "7bcd73ea10601355"
+            ]
+        ]
+    },
+    {
+        "id": "7bcd73ea10601355",
+        "type": "switch",
+        "z": "77a5d6919bd23113",
+        "name": "",
+        "property": "payload.action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "_1_",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_2_",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_3_",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_4_",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_5_",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_6_",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 6,
+        "x": 370,
+        "y": 200,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e80d332108dddf11",
+        "type": "function",
+        "z": "968de947dcf2fcd8",
+        "name": "",
+        "func": "\nvar newMsg = {};\n\nif(msg.payload.battery !== undefined)\n    { // To monitor the battery\n    newMsg.topic = \"argentan/\" + msg.topic + \"/batterie\" ;\n    newMsg.payload = msg.payload.battery;\n    node.send([null, newMsg]);\n    }\n\nif (msg.payload.device_temperature !== undefined)\n    { // To monitor the temperature\n    newMsg.topic = \"argentan/\" + msg.topic + \"/temperature\"\n    newMsg.payload = msg.payload.device_temperature;\n    node.send([null, newMsg]);\n}\n\nswitch(msg.payload.action)\n    {\n    case \"single\" :\n        msg.event = \"simple\";\n        break;\n    case \"double\" :\n        msg.event = msg.payload.action;\n        break;\n    case \"hold\":\n        msg.event = \"long\";\n        break;\n    case \"toggle\":\n        msg.event = msg.payload.action;\n        break;\n    case \"brightness_down_click\":\n        msg.event = \"less\";\n        break;\n    case \"brightness_up_click\":\n        msg.event = \"more\";\n        break;\n    case \"arrow_right_click\":\n        msg.event = \"next\";\n        break;\n    case \"arrow_left_click\":\n        msg.event = \"previous\";\n        break;\n    }\n\nif (msg.event != undefined)\n    return([msg, null]);\n\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [],
+            [
+                "bdf5201d4937ca30"
+            ]
+        ]
+    },
+    {
+        "id": "bdf5201d4937ca30",
+        "type": "mqtt out",
+        "z": "968de947dcf2fcd8",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 430,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "be0e4ff59fe48e04",
+        "type": "function",
+        "z": "01799b7bc5cc6cb8",
+        "name": "",
+        "func": "var newstate = msg.payload ;\n\nif (msg.ampoule == undefined)\n    msg.ampoule = env.get(\"ampoule\");\nif (msg.etat == undefined)\n    msg.etat = env.get(\"etat\");\nif (msg.luminosite == undefined)\n    msg.luminosite = parseInt(env.get(\"luminosite\"));\nif (msg.temperature == undefined)\n    msg.temperature = parseInt(env.get(\"temperature\"));\nif (msg.color == undefined)\n    msg.color = env.get(\"color\");\n\nmsg.payload = {} ;\n\nif (msg.luminosite != undefined && msg.luminosite!=0)\n    {// msg.payload[\"brightness\"] = 254 ; // 0 - 254\n    msg.payload[\"brightness\"] = Math.ceil( 2.54 * msg.luminosite) ;\n    }\n\nif(msg.color != \"\") // Color is prioritary on white temperature\n    { // Value is hexa #RRGGBB\n    msg.payload[\"color\"] = { \"hex\": msg.color };\n    }\nelse if (msg.temperature != undefined && msg.temperature!= 0)\n    {\n    // msg.payload[\"color_temp\"] = 370 ; // 153 - 370\n    msg.payload[\"color_temp\"] = 153 + Math.ceil(2.17 * msg.temperature);\n    }\n\nmsg.payload[\"state\"] = msg.etat;\n// msg.payload[\"transition\"] = 5;\nmsg.topic = \"zigbee2mqtt/\" + msg.ampoule + \"/set\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [
+                "e8c7240e363baa16"
+            ]
+        ]
+    },
+    {
+        "id": "e8c7240e363baa16",
+        "type": "mqtt out",
+        "z": "01799b7bc5cc6cb8",
+        "name": "",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 370,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "1ff87cadc3ca34e8",
+        "type": "function",
+        "z": "00592b45cd933e7c",
+        "name": "",
+        "func": "var newMsg = {};\n\nif (msg.payload.battery !== undefined) { // To monitor the battery\n    newMsg.topic = \"siouville/\" + msg.topic + \"/batterie\";\n    newMsg.payload = msg.payload.battery;\n    node.send([null, null, newMsg]);\n}\n\nif (msg.payload.device_temperature !== undefined) { // To monitor the temperature\n    newMsg.topic = \"siouville/\" + msg.topic + \"/temperature\"\n    newMsg.payload = msg.payload.device_temperature;\n    node.send([null, null, newMsg]);\n}\n\nif (msg.payload.occupancy === true)\n    return ([msg, null, null]);\nreturn ([null, msg, null]);",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 80,
+        "wires": [
+            [],
+            [],
+            [
+                "398a48be6ddbc410"
+            ]
+        ]
+    },
+    {
+        "id": "398a48be6ddbc410",
+        "type": "mqtt out",
+        "z": "00592b45cd933e7c",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 430,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "cfc02862707b37bc",
+        "type": "function",
+        "z": "8f9c2451b9d4bd6d",
+        "name": "",
+        "func": "switch(msg.event)\n    {\n    case \"simple\" :\n        return([msg, null, null]);\n    case \"double\" :\n        return ([null, msg,  null]);\n    case \"long\":\n        return ([null, null, msg ]);\n    }\n",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 100,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "66955b86b06d5132",
+        "type": "function",
+        "z": "e0854c979f67781c",
+        "name": "",
+        "func": "if(msg.payload.action == undefined)\n    return ;\n\nif (msg.payload.action.indexOf(\"shake\") > -1)\n    msg.event = \"shake\";\nelse if (msg.payload.action.indexOf(\"tap\") > -1)\n    msg.event = \"tap\";\nelse if (msg.payload.action.indexOf(\"flip90\") > -1)\n    msg.event = \"flip90\";\nelse if (msg.payload.action.indexOf(\"flip180\") > -1)\n    msg.event = \"flip180\";\nelse if (msg.payload.action.indexOf(\"rotate_left\") > -1)\n    msg.event = \"rotate_left\";\nelse if (msg.payload.action.indexOf(\"rotate_right\") > -1)\n    msg.event = \"rotate_right\";\n\nif (msg.event != undefined)\n    {\n//    msg.payload = msg.action ;\n    return msg ;\n    }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 140,
+        "wires": [
+            [
+                "b5f918a04fe4f64b"
+            ]
+        ]
+    },
+    {
+        "id": "b5f918a04fe4f64b",
+        "type": "switch",
+        "z": "e0854c979f67781c",
+        "name": "",
+        "property": "event",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "shake",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "tap",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "flip90",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "flip180",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "rotate_left",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "rotate_right",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 6,
+        "x": 390,
+        "y": 140,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ],
+        "info": "Le sorties possibles sont :\r\n1: shake\r\n2: tap\r\n3: flip90\r\n4: flip180\r\n5: rotate_left\r\n6: rotate_right\r\n\r\n\r\n"
+    },
+    {
+        "id": "3dd534bdc54e719a",
+        "type": "function",
+        "z": "d22a6164a07592ef",
+        "name": "",
+        "func": "switch(msg.event)\n    {\n    case \"toggle\" :\n        return ([msg, null, null, null, null]);\n    case \"less\" :\n        return ([null, msg, null, null, null]);\n    case \"more\":\n        return ([null, null, msg, null, null]);\n    case \"previous\":\n        return ([null, null, null, msg, null]);\n    case \"next\":\n        return ([null, null, null, null, msg]);\n    }\n",
+        "outputs": 5,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 120,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a2a20837e38d5673",
+        "type": "mqtt out",
+        "z": "10dd252317cb822a",
+        "name": "",
+        "topic": "flwatchdog",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2c7b5a9da06df627",
+        "x": 550,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "faad990839c7a942",
+        "type": "function",
+        "z": "10dd252317cb822a",
+        "name": "Build watchdog",
+        "func": "/*\n- id : ID of the watchdog (mandatory) : must be unique. \n- delay (mandatory) : maximum delay in seconds between two calls to the concerned watchdog.\n- monitor (mandatory) : the +xxx phone number of the recipient of the alert through SMS.\n- message (mandatory) : message to send to the monitor when the delay is overpassed.\n*/\n\nvar watchdog = { id : \"FerdinandBUISSON_domotique\",\n            delay : 360 , // On recoit un status toutes le 5mn normalement.\n            monitor : \"+33661776135\",\n    message: \"Watchdog report : FerdinandBUISSON_domotique failed.\"\n            } ;\n\nmsg.payload = watchdog ;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 220,
+        "wires": [
+            [
+                "a2a20837e38d5673"
+            ]
+        ]
+    },
+    {
+        "id": "93a9a021c4c88011",
+        "type": "inject",
+        "z": "10dd252317cb822a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "faad990839c7a942"
+            ]
+        ]
+    },
+    {
+        "id": "a034b77be9ef6d89",
+        "type": "mqtt in",
+        "z": "10dd252317cb822a",
+        "name": "",
+        "topic": "zigbee2mqtt/+",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "9424065c4b5f5e38"
+            ]
+        ]
+    },
+    {
+        "id": "127866242f8a1818",
+        "type": "debug",
+        "z": "10dd252317cb822a",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "9424065c4b5f5e38",
+        "type": "function",
+        "z": "10dd252317cb822a",
+        "name": "Update devices' states",
+        "func": "var device = msg.topic.substring(12) ;\nvar devices = global.get(\"devices\");\nif(devices === undefined)\n    {\n    devices = {} ;\n    global.set(\"devices\", devices);\n    }\n   \nvar preval = devices[device] ;\nif(preval != undefined)\n    preval[\"preval\"]=null ;\ndevices[device] = msg.payload ;\ndevices[device][\"preval\"]=preval;\ndevices[device][\"stamp\"] = Date.now() ; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fee7269ef3c48f56",
+        "type": "inject",
+        "z": "10dd252317cb822a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 140,
+        "wires": [
+            [
+                "8243a477478fd84a"
+            ]
+        ]
+    },
+    {
+        "id": "8243a477478fd84a",
+        "type": "function",
+        "z": "10dd252317cb822a",
+        "name": "Display devices' states",
+        "func": "msg.payload = global.get(\"devices\");\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 140,
+        "wires": [
+            [
+                "127866242f8a1818"
+            ]
+        ]
+    },
+    {
+        "id": "530e508af95089fa",
+        "type": "mqtt in",
+        "z": "10dd252317cb822a",
+        "name": "",
+        "topic": "zigbee2mqtt/+",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "a58b46def607af88"
+            ]
+        ]
+    },
+    {
+        "id": "6cfedc5d1369dcd5",
+        "type": "debug",
+        "z": "10dd252317cb822a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a58b46def607af88",
+        "type": "function",
+        "z": "10dd252317cb822a",
+        "name": "",
+        "func": "var newMsg = {} ;\nmsg.topic = msg.topic.substring(12) ;\n\nif (msg.payload.battery !== undefined) { // To monitor the battery\n    newMsg.topic = \"argentan/zigbee2mqtt/\" + msg.topic + \"/batterie\";\n    newMsg.payload = msg.payload.battery;\n    node.send([null, newMsg]);\n}\n\nif (msg.payload.device_temperature !== undefined) { \n    newMsg.topic = \"argentan/zigbee2mqtt/\" + msg.topic + \"/temperature\";\n    newMsg.payload = msg.payload.device_temperature;\n    node.send([null, newMsg]);\n}\n\n\nif (msg.payload.consumption !== undefined) { \n    newMsg.topic = \"argentan/zigbee2mqtt/\" + msg.topic + \"/consumption\";\n    newMsg.payload = msg.payload.consumption;\n    node.send([null, newMsg]);\n}\n\n\nif (msg.payload.power !== undefined) {\n    newMsg.topic = \"argentan/zigbee2mqtt/\" + msg.topic + \"/power\";\n    newMsg.payload = msg.payload.power;\n    node.send([null, newMsg]);\n}\n\nreturn ([msg, null]);\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 340,
+        "wires": [
+            [
+                "6cfedc5d1369dcd5"
+            ],
+            [
+                "dc2aa4605bfbab80"
+            ]
+        ]
+    },
+    {
+        "id": "dc2aa4605bfbab80",
+        "type": "mqtt out",
+        "z": "10dd252317cb822a",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "7be6658fa8d1bfc9",
+        "x": 570,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "cebc5d21a9712773",
+        "type": "subflow:968de947dcf2fcd8",
+        "z": "f03cfb04ffe21e70",
+        "name": "",
+        "x": 280,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec407612f85f92f4",
+        "type": "subflow:77a5d6919bd23113",
+        "z": "f03cfb04ffe21e70",
+        "name": "",
+        "x": 260,
+        "y": 280,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "0ab85fead2c7d7ee",
+        "type": "subflow:d3deb48544895eb1",
+        "z": "f03cfb04ffe21e70",
+        "name": "",
+        "x": 280,
+        "y": 200,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "709474f6e8347c16",
+        "type": "subflow:0181e1b26c9ae404",
+        "z": "f03cfb04ffe21e70",
+        "name": "R002",
+        "env": [
+            {
+                "name": "relais",
+                "value": "R002",
+                "type": "str"
+            },
+            {
+                "name": "canal",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "TOGGLE",
+                "type": "str"
+            }
+        ],
+        "x": 610,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5533ba63f4f44fb8",
+        "type": "subflow:01799b7bc5cc6cb8",
+        "z": "f03cfb04ffe21e70",
+        "name": "A005",
+        "env": [
+            {
+                "name": "ampoule",
+                "value": "A005",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "TOGGLE",
+                "type": "str"
+            },
+            {
+                "name": "luminosite",
+                "value": "90",
+                "type": "str"
+            },
+            {
+                "name": "temperature",
+                "value": "100",
+                "type": "str"
+            },
+            {
+                "name": "color",
+                "value": "#FF00FF",
+                "type": "str"
+            }
+        ],
+        "x": 890,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "670cc4ad07c67dce",
+        "type": "subflow:00592b45cd933e7c",
+        "z": "f03cfb04ffe21e70",
+        "name": "",
+        "x": 270,
+        "y": 380,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c36da1672d8b72d4",
+        "type": "subflow:8f9c2451b9d4bd6d",
+        "z": "f03cfb04ffe21e70",
+        "name": "Type appui",
+        "x": 480,
+        "y": 300,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "79564ad805c1bf0b",
+        "type": "inject",
+        "z": "f03cfb04ffe21e70",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 720,
+        "y": 100,
+        "wires": [
+            [
+                "5533ba63f4f44fb8"
+            ]
+        ]
+    },
+    {
+        "id": "3c65017d15795b19",
+        "type": "subflow:e0854c979f67781c",
+        "z": "f03cfb04ffe21e70",
+        "name": "",
+        "x": 490,
+        "y": 80,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9e6e70c1b34f39d6",
+        "type": "mqtt in",
+        "z": "f03cfb04ffe21e70",
+        "name": "",
+        "topic": "zigbee2mqtt/I002",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 560,
+        "wires": [
+            [
+                "106d5fb82a609f7a"
+            ]
+        ]
+    },
+    {
+        "id": "106d5fb82a609f7a",
+        "type": "subflow:01799b7bc5cc6cb8",
+        "z": "f03cfb04ffe21e70",
+        "name": "A009",
+        "env": [
+            {
+                "name": "ampoule",
+                "value": "A009",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "TOGGLE",
+                "type": "str"
+            },
+            {
+                "name": "luminosite",
+                "value": "20",
+                "type": "str"
+            },
+            {
+                "name": "temperature",
+                "value": "100",
+                "type": "str"
+            },
+            {
+                "name": "color",
+                "value": "#FF0000",
+                "type": "str"
+            }
+        ],
+        "x": 350,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "3c23219cc935ee5c",
+        "type": "mqtt in",
+        "z": "f03cfb04ffe21e70",
+        "name": "",
+        "topic": "zigbee2mqtt/R003",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 640,
+        "wires": [
+            [
+                "6837d236ddc16c21"
+            ]
+        ]
+    },
+    {
+        "id": "6837d236ddc16c21",
+        "type": "debug",
+        "z": "f03cfb04ffe21e70",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "084f49749e87538b",
+        "type": "inject",
+        "z": "f03cfb04ffe21e70",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 540,
+        "y": 420,
+        "wires": [
+            [
+                "f0bd66cc7f9ba35c"
+            ]
+        ]
+    },
+    {
+        "id": "f0bd66cc7f9ba35c",
+        "type": "subflow:0181e1b26c9ae404",
+        "z": "f03cfb04ffe21e70",
+        "name": "R003",
+        "env": [
+            {
+                "name": "relais",
+                "value": "R003",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "ON",
+                "type": "str"
+            }
+        ],
+        "x": 730,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "a294d608db0d42c6",
+        "type": "inject",
+        "z": "f03cfb04ffe21e70",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 540,
+        "y": 460,
+        "wires": [
+            [
+                "a261170a53256b28"
+            ]
+        ]
+    },
+    {
+        "id": "a261170a53256b28",
+        "type": "subflow:0181e1b26c9ae404",
+        "z": "f03cfb04ffe21e70",
+        "name": "R003",
+        "env": [
+            {
+                "name": "relais",
+                "value": "R003",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "OFF",
+                "type": "str"
+            }
+        ],
+        "x": 730,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "f2805d96e9ca3d42",
+        "type": "subflow:968de947dcf2fcd8",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "x": 320,
+        "y": 120,
+        "wires": [
+            [
+                "60a77e72c4a08cf6"
+            ]
+        ]
+    },
+    {
+        "id": "32212a390c7f2ff2",
+        "type": "subflow:0181e1b26c9ae404",
+        "z": "469b4b2f6211fe88",
+        "name": "R002-2",
+        "env": [
+            {
+                "name": "relais",
+                "value": "R002",
+                "type": "str"
+            },
+            {
+                "name": "canal",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "TOGGLE",
+                "type": "str"
+            }
+        ],
+        "x": 620,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "6d1a37df4bd9db0f",
+        "type": "mqtt in",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "zigbee2mqtt/I003",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "f2805d96e9ca3d42"
+            ]
+        ]
+    },
+    {
+        "id": "b670deefdf9cff67",
+        "type": "subflow:0181e1b26c9ae404",
+        "z": "469b4b2f6211fe88",
+        "name": "R002-1",
+        "env": [
+            {
+                "name": "relais",
+                "value": "R002",
+                "type": "str"
+            },
+            {
+                "name": "canal",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "TOGGLE",
+                "type": "str"
+            }
+        ],
+        "x": 620,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4d4e95bf9f104a42",
+        "type": "mqtt out",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/salon/toggle",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 750,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f4df2fd0f1a35a26",
+        "type": "mqtt out",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/jardin/toggle",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 750,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "35e461fd6374504d",
+        "type": "mqtt in",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/salon/toggle",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 340,
+        "y": 460,
+        "wires": [
+            [
+                "b670deefdf9cff67"
+            ]
+        ]
+    },
+    {
+        "id": "8809fec5c1d00dfa",
+        "type": "mqtt in",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/jardin/off",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 330,
+        "y": 580,
+        "wires": [
+            [
+                "0279fe2521e8a12b"
+            ]
+        ]
+    },
+    {
+        "id": "60a77e72c4a08cf6",
+        "type": "subflow:8f9c2451b9d4bd6d",
+        "z": "469b4b2f6211fe88",
+        "name": "Type appui",
+        "x": 480,
+        "y": 120,
+        "wires": [
+            [
+                "f4df2fd0f1a35a26",
+                "4d4e95bf9f104a42"
+            ],
+            [
+                "2e2a0e60c04e99b3",
+                "f3f0890b16062d39"
+            ],
+            [
+                "ffbd57e0453d4001"
+            ]
+        ]
+    },
+    {
+        "id": "0597887b54ea54a7",
+        "type": "mqtt in",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/salon/off",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 330,
+        "y": 540,
+        "wires": [
+            [
+                "9a56c4f9e77be27b"
+            ]
+        ]
+    },
+    {
+        "id": "ffbd57e0453d4001",
+        "type": "mqtt out",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/jardin/on",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 740,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "2e2a0e60c04e99b3",
+        "type": "mqtt out",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/jardin/off",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 740,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "f3f0890b16062d39",
+        "type": "mqtt out",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/salon/off",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 740,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "4904cdf8a25323b4",
+        "type": "mqtt in",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/jardin/toggle",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 340,
+        "y": 500,
+        "wires": [
+            [
+                "32212a390c7f2ff2"
+            ]
+        ]
+    },
+    {
+        "id": "d7db1ec0e5ecf2e4",
+        "type": "mqtt in",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/jardin/on",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 330,
+        "y": 660,
+        "wires": [
+            [
+                "c6b7a79496a3fa74"
+            ]
+        ]
+    },
+    {
+        "id": "0279fe2521e8a12b",
+        "type": "subflow:0181e1b26c9ae404",
+        "z": "469b4b2f6211fe88",
+        "name": "R002-2",
+        "env": [
+            {
+                "name": "relais",
+                "value": "R002",
+                "type": "str"
+            },
+            {
+                "name": "canal",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "OFF",
+                "type": "str"
+            }
+        ],
+        "x": 620,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "9a56c4f9e77be27b",
+        "type": "subflow:0181e1b26c9ae404",
+        "z": "469b4b2f6211fe88",
+        "name": "R002-1",
+        "env": [
+            {
+                "name": "relais",
+                "value": "R002",
+                "type": "str"
+            },
+            {
+                "name": "canal",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "TOGGLE",
+                "type": "str"
+            }
+        ],
+        "x": 620,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "c6b7a79496a3fa74",
+        "type": "subflow:0181e1b26c9ae404",
+        "z": "469b4b2f6211fe88",
+        "name": "R002-2",
+        "env": [
+            {
+                "name": "relais",
+                "value": "R002",
+                "type": "str"
+            },
+            {
+                "name": "canal",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "ON",
+                "type": "str"
+            }
+        ],
+        "x": 620,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "2f0e6407dc3e23bc",
+        "type": "mqtt in",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/salon/on",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 330,
+        "y": 620,
+        "wires": [
+            [
+                "7a81f6728edfc106"
+            ]
+        ]
+    },
+    {
+        "id": "7a81f6728edfc106",
+        "type": "subflow:0181e1b26c9ae404",
+        "z": "469b4b2f6211fe88",
+        "name": "R002-1",
+        "env": [
+            {
+                "name": "relais",
+                "value": "R002",
+                "type": "str"
+            },
+            {
+                "name": "canal",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "ON",
+                "type": "str"
+            }
+        ],
+        "x": 620,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "fa28bf9d0bb76e40",
+        "type": "subflow:00592b45cd933e7c",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "x": 370,
+        "y": 320,
+        "wires": [
+            [
+                "4e0d9687ee9134f2"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5b62d083ae610c0d",
+        "type": "mqtt in",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "zigbee2mqtt/P002",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "fa28bf9d0bb76e40"
+            ]
+        ]
+    },
+    {
+        "id": "34f5545bfd3c23d9",
+        "type": "mqtt out",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/jardin/on",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 800,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "54440a39bdd03a2b",
+        "type": "mqtt out",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/salon/on",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 800,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "4e0d9687ee9134f2",
+        "type": "function",
+        "z": "469b4b2f6211fe88",
+        "name": "function 2",
+        "func": "if(msg.payload.illuminance<1)\n    return([msg, null]);\nreturn([null, msg]);",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 300,
+        "wires": [
+            [
+                "34f5545bfd3c23d9",
+                "54440a39bdd03a2b"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "fe389d21a8128268",
+        "type": "inject",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 460,
+        "wires": [
+            [
+                "b670deefdf9cff67"
+            ]
+        ]
+    },
+    {
+        "id": "1d2063ddf78a7bfa",
+        "type": "inject",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 500,
+        "wires": [
+            [
+                "32212a390c7f2ff2"
+            ]
+        ]
+    },
+    {
+        "id": "44819703ccb0a548",
+        "type": "inject",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 540,
+        "wires": [
+            [
+                "9a56c4f9e77be27b"
+            ]
+        ]
+    },
+    {
+        "id": "5da405da6a434de4",
+        "type": "inject",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 580,
+        "wires": [
+            [
+                "0279fe2521e8a12b"
+            ]
+        ]
+    },
+    {
+        "id": "5e08b77d7071f66e",
+        "type": "inject",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 620,
+        "wires": [
+            [
+                "7a81f6728edfc106"
+            ]
+        ]
+    },
+    {
+        "id": "8a431ab29bd04258",
+        "type": "inject",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 660,
+        "wires": [
+            [
+                "c6b7a79496a3fa74"
+            ]
+        ]
+    },
+    {
+        "id": "cd0bf6d0cee2c30a",
+        "type": "subflow:968de947dcf2fcd8",
+        "z": "2f76b69f4fde1323",
+        "name": "",
+        "x": 340,
+        "y": 100,
+        "wires": [
+            [
+                "c5b692df0b2cecfe"
+            ]
+        ]
+    },
+    {
+        "id": "43eab303d69aaecb",
+        "type": "mqtt in",
+        "z": "2f76b69f4fde1323",
+        "name": "",
+        "topic": "zigbee2mqtt/I004",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "cd0bf6d0cee2c30a"
+            ]
+        ]
+    },
+    {
+        "id": "c5b692df0b2cecfe",
+        "type": "subflow:8f9c2451b9d4bd6d",
+        "z": "2f76b69f4fde1323",
+        "name": "",
+        "x": 550,
+        "y": 100,
+        "wires": [
+            [
+                "bc7a302bf4fe189d"
+            ],
+            [
+                "5734bcdf27688e0a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "bc7a302bf4fe189d",
+        "type": "mqtt out",
+        "z": "2f76b69f4fde1323",
+        "name": "",
+        "topic": "argentan/chambreparents/on",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 820,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "5734bcdf27688e0a",
+        "type": "mqtt out",
+        "z": "2f76b69f4fde1323",
+        "name": "",
+        "topic": "argentan/chambreparents/off",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 820,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "47205680e182ea61",
+        "type": "mqtt in",
+        "z": "2f76b69f4fde1323",
+        "name": "",
+        "topic": "argentan/chambreparents/on",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 540,
+        "wires": [
+            [
+                "5e77857d1472f760",
+                "0f94839e24f3a0d9"
+            ]
+        ]
+    },
+    {
+        "id": "1ad82a2c02b72ff9",
+        "type": "mqtt in",
+        "z": "2f76b69f4fde1323",
+        "name": "",
+        "topic": "zigbee2mqtt/I005",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "cd0bf6d0cee2c30a"
+            ]
+        ]
+    },
+    {
+        "id": "baa68a80d9f2aaf9",
+        "type": "mqtt in",
+        "z": "2f76b69f4fde1323",
+        "name": "",
+        "topic": "argentan/chambreparents/off",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 620,
+        "wires": [
+            [
+                "fe25075a87434a80",
+                "b7b0159025077b1f"
+            ]
+        ]
+    },
+    {
+        "id": "5e77857d1472f760",
+        "type": "subflow:01799b7bc5cc6cb8",
+        "z": "2f76b69f4fde1323",
+        "name": "A007",
+        "env": [
+            {
+                "name": "ampoule",
+                "value": "A007",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "ON",
+                "type": "str"
+            },
+            {
+                "name": "luminosite",
+                "value": "100",
+                "type": "str"
+            },
+            {
+                "name": "temperature",
+                "value": "80",
+                "type": "str"
+            }
+        ],
+        "x": 450,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "0f94839e24f3a0d9",
+        "type": "subflow:01799b7bc5cc6cb8",
+        "z": "2f76b69f4fde1323",
+        "name": "A006",
+        "env": [
+            {
+                "name": "ampoule",
+                "value": "A006",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "ON",
+                "type": "str"
+            },
+            {
+                "name": "luminosite",
+                "value": "100",
+                "type": "str"
+            },
+            {
+                "name": "temperature",
+                "value": "80",
+                "type": "str"
+            }
+        ],
+        "x": 450,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "fe25075a87434a80",
+        "type": "subflow:01799b7bc5cc6cb8",
+        "z": "2f76b69f4fde1323",
+        "name": "A007",
+        "env": [
+            {
+                "name": "ampoule",
+                "value": "A007",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "OFF",
+                "type": "str"
+            },
+            {
+                "name": "temperature",
+                "value": "80",
+                "type": "str"
+            }
+        ],
+        "x": 450,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "b7b0159025077b1f",
+        "type": "subflow:01799b7bc5cc6cb8",
+        "z": "2f76b69f4fde1323",
+        "name": "A006",
+        "env": [
+            {
+                "name": "ampoule",
+                "value": "A006",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "OFF",
+                "type": "str"
+            },
+            {
+                "name": "temperature",
+                "value": "80",
+                "type": "str"
+            }
+        ],
+        "x": 450,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "2bb13e943716d59f",
+        "type": "mqtt in",
+        "z": "2f76b69f4fde1323",
+        "name": "",
+        "topic": "zigbee2mqtt/C001",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "a4dde9b4ce808ba8"
+            ]
+        ]
+    },
+    {
+        "id": "a4dde9b4ce808ba8",
+        "type": "subflow:e0854c979f67781c",
+        "z": "2f76b69f4fde1323",
+        "name": "",
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [],
+            [],
+            [],
+            [
+                "eecd3822316eeabf"
+            ],
+            [
+                "6c413e1fa1332657"
+            ],
+            [
+                "6c413e1fa1332657"
+            ]
+        ],
+        "info": "Les sorties possibles sont :\r\n1: shake\r\n2: tap\r\n3: flip90\r\n4: flip180\r\n5: rotate_left\r\n6: rotate_right\r\n"
+    },
+    {
+        "id": "eecd3822316eeabf",
+        "type": "mqtt out",
+        "z": "2f76b69f4fde1323",
+        "name": "",
+        "topic": "argentan/chambreparents/off",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 560,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "57c4da0675c73126",
+        "type": "inject",
+        "z": "2f76b69f4fde1323",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 560,
+        "y": 40,
+        "wires": [
+            [
+                "bc7a302bf4fe189d"
+            ]
+        ]
+    },
+    {
+        "id": "6c413e1fa1332657",
+        "type": "subflow:01799b7bc5cc6cb8",
+        "z": "2f76b69f4fde1323",
+        "name": "A006 faible",
+        "env": [
+            {
+                "name": "ampoule",
+                "value": "A006",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "ON",
+                "type": "str"
+            },
+            {
+                "name": "luminosite",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "name": "temperature",
+                "value": "80",
+                "type": "str"
+            }
+        ],
+        "x": 510,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "63d1bab4eb78a86f",
+        "type": "inject",
+        "z": "2f76b69f4fde1323",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "45 06 * * 1,2,3,4,5",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "6c413e1fa1332657"
+            ]
+        ]
+    },
+    {
+        "id": "849d15d2184ae4aa",
+        "type": "subflow:01799b7bc5cc6cb8",
+        "z": "2f76b69f4fde1323",
+        "name": "A007faible",
+        "env": [
+            {
+                "name": "ampoule",
+                "value": "A007",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "ON",
+                "type": "str"
+            },
+            {
+                "name": "luminosite",
+                "value": "30",
+                "type": "str"
+            },
+            {
+                "name": "temperature",
+                "value": "80",
+                "type": "str"
+            }
+        ],
+        "x": 510,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "84b498882249f759",
+        "type": "inject",
+        "z": "2f76b69f4fde1323",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "30 23 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "849d15d2184ae4aa"
+            ]
+        ]
+    },
+    {
+        "id": "9737a04251313c3f",
+        "type": "subflow:01799b7bc5cc6cb8",
+        "z": "f478c30160855d4f",
+        "name": "A003",
+        "env": [
+            {
+                "name": "ampoule",
+                "value": "A003",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "ON",
+                "type": "str"
+            },
+            {
+                "name": "luminosite",
+                "value": "100",
+                "type": "str"
+            },
+            {
+                "name": "color",
+                "value": "#DD69DD",
+                "type": "str"
+            }
+        ],
+        "x": 710,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f4f147e19ac1e885",
+        "type": "subflow:01799b7bc5cc6cb8",
+        "z": "f478c30160855d4f",
+        "name": "A004",
+        "env": [
+            {
+                "name": "ampoule",
+                "value": "A004",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "ON",
+                "type": "str"
+            },
+            {
+                "name": "luminosite",
+                "value": "100",
+                "type": "str"
+            },
+            {
+                "name": "color",
+                "value": "#DD69DD",
+                "type": "str"
+            }
+        ],
+        "x": 710,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ca8d3c9015d020f6",
+        "type": "subflow:01799b7bc5cc6cb8",
+        "z": "f478c30160855d4f",
+        "name": "A005",
+        "env": [
+            {
+                "name": "ampoule",
+                "value": "A005",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "ON",
+                "type": "str"
+            },
+            {
+                "name": "luminosite",
+                "value": "100",
+                "type": "str"
+            },
+            {
+                "name": "color",
+                "value": "#DD69DD",
+                "type": "str"
+            }
+        ],
+        "x": 710,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "41e49d6ea246f40f",
+        "type": "inject",
+        "z": "f478c30160855d4f",
+        "name": "",
+        "props": [
+            {
+                "p": "color",
+                "v": "#DD69DD",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 210,
+        "y": 80,
+        "wires": [
+            [
+                "83daf4e89d62be52"
+            ]
+        ]
+    },
+    {
+        "id": "cf67f043c7a90703",
+        "type": "inject",
+        "z": "f478c30160855d4f",
+        "name": "",
+        "props": [
+            {
+                "p": "color",
+                "v": "#DD6900",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "83daf4e89d62be52"
+            ]
+        ]
+    },
+    {
+        "id": "83daf4e89d62be52",
+        "type": "function",
+        "z": "f478c30160855d4f",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 120,
+        "wires": [
+            [
+                "9737a04251313c3f",
+                "f4f147e19ac1e885",
+                "ca8d3c9015d020f6"
+            ]
+        ]
+    },
+    {
+        "id": "45f47dfde6e0be46",
+        "type": "subflow:01799b7bc5cc6cb8",
+        "z": "f478c30160855d4f",
+        "name": "A003",
+        "env": [
+            {
+                "name": "ampoule",
+                "value": "A003",
+                "type": "str"
+            }
+        ],
+        "x": 630,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "023ad79056098d22",
+        "type": "subflow:01799b7bc5cc6cb8",
+        "z": "f478c30160855d4f",
+        "name": "A004",
+        "env": [
+            {
+                "name": "ampoule",
+                "value": "A004",
+                "type": "str"
+            }
+        ],
+        "x": 630,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "0c641f2c18cb4678",
+        "type": "subflow:01799b7bc5cc6cb8",
+        "z": "f478c30160855d4f",
+        "name": "A005",
+        "env": [
+            {
+                "name": "ampoule",
+                "value": "A005",
+                "type": "str"
+            }
+        ],
+        "x": 630,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "8001417f65f0d7bb",
+        "type": "mqtt in",
+        "z": "f478c30160855d4f",
+        "name": "",
+        "topic": "argentan/atelier/off",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 460,
+        "wires": [
+            [
+                "9c0decd82922d363"
+            ]
+        ]
+    },
+    {
+        "id": "9c0decd82922d363",
+        "type": "function",
+        "z": "f478c30160855d4f",
+        "name": "OFF",
+        "func": "msg.etat = \"OFF\" ;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 460,
+        "wires": [
+            [
+                "45f47dfde6e0be46",
+                "023ad79056098d22",
+                "0c641f2c18cb4678"
+            ]
+        ]
+    },
+    {
+        "id": "ee72a829bdddc1a4",
+        "type": "mqtt in",
+        "z": "f478c30160855d4f",
+        "name": "",
+        "topic": "zigbee2mqtt/X001",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 260,
+        "wires": [
+            [
+                "40371d37b2c317a7"
+            ]
+        ]
+    },
+    {
+        "id": "109511a3022eb464",
+        "type": "mqtt in",
+        "z": "f478c30160855d4f",
+        "name": "",
+        "topic": "argentan/atelier/toggle",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 380,
+        "wires": [
+            [
+                "71533806baf44ebd"
+            ]
+        ]
+    },
+    {
+        "id": "71533806baf44ebd",
+        "type": "function",
+        "z": "f478c30160855d4f",
+        "name": "TOGGLE",
+        "func": "msg.etat = \"TOGGLE\" ;\nmsg.luminosite = 100 ; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 380,
+        "wires": [
+            [
+                "45f47dfde6e0be46",
+                "023ad79056098d22",
+                "0c641f2c18cb4678"
+            ]
+        ]
+    },
+    {
+        "id": "49f31c23d96be7b9",
+        "type": "mqtt in",
+        "z": "f478c30160855d4f",
+        "name": "",
+        "topic": "argentan/atelier/on",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 420,
+        "wires": [
+            [
+                "b061ddb8410a81fe"
+            ]
+        ]
+    },
+    {
+        "id": "b061ddb8410a81fe",
+        "type": "function",
+        "z": "f478c30160855d4f",
+        "name": "ON",
+        "func": "msg.etat = \"ON\" ;\nmsg.luminosite = 100; \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 420,
+        "wires": [
+            [
+                "45f47dfde6e0be46",
+                "023ad79056098d22",
+                "0c641f2c18cb4678"
+            ]
+        ]
+    },
+    {
+        "id": "40371d37b2c317a7",
+        "type": "subflow:968de947dcf2fcd8",
+        "z": "f478c30160855d4f",
+        "name": "",
+        "x": 440,
+        "y": 260,
+        "wires": [
+            [
+                "fef9be841f136a55"
+            ]
+        ]
+    },
+    {
+        "id": "fef9be841f136a55",
+        "type": "subflow:d22a6164a07592ef",
+        "z": "f478c30160855d4f",
+        "name": "",
+        "x": 640,
+        "y": 260,
+        "wires": [
+            [
+                "1d0e9b12f78fa284"
+            ],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1d0e9b12f78fa284",
+        "type": "mqtt out",
+        "z": "f478c30160855d4f",
+        "name": "",
+        "topic": "argentan/atelier/toggle",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 920,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "4963be5.b45044",
+        "type": "mqtt in",
+        "z": "2537c1c5.0f952e",
+        "name": "",
+        "topic": "gw/588E81FFFE72CDAC/heartbeat",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "2be25b20.752014",
+        "inputs": 0,
+        "x": 160,
+        "y": 40,
+        "wires": [
+            [
+                "984b561b.7b2b78",
+                "db53c55d.fda7c8"
+            ]
+        ]
+    },
+    {
+        "id": "a91a0861.c1bce8",
+        "type": "mqtt in",
+        "z": "2537c1c5.0f952e",
+        "name": "",
+        "topic": "zigbee/recv",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "2be25b20.752014",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "953810db.72124",
+                "b7b0f845.d1b8b8"
+            ]
+        ]
+    },
+    {
+        "id": "953810db.72124",
+        "type": "debug",
+        "z": "2537c1c5.0f952e",
+        "name": "ZIGBEE",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "984b561b.7b2b78",
+        "type": "debug",
+        "z": "2537c1c5.0f952e",
+        "name": "GATEWAY",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "9c441490.ef5ce8",
+        "type": "mqtt in",
+        "z": "2537c1c5.0f952e",
+        "name": "",
+        "topic": "gw/588E81FFFE72CDAC/MessageReceived",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "2be25b20.752014",
+        "inputs": 0,
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "984b561b.7b2b78",
+                "db53c55d.fda7c8"
+            ]
+        ]
+    },
+    {
+        "id": "c413da38.4effc8",
+        "type": "mqtt in",
+        "z": "2537c1c5.0f952e",
+        "name": "",
+        "topic": "zigbee/send",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "2be25b20.752014",
+        "inputs": 0,
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "953810db.72124",
+                "b7b0f845.d1b8b8",
+                "36949d6b.52cfd2"
+            ]
+        ]
+    },
+    {
+        "id": "b7b0f845.d1b8b8",
+        "type": "json",
+        "z": "2537c1c5.0f952e",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 290,
+        "y": 240,
+        "wires": [
+            [
+                "ea74c2b7.f14a6"
+            ]
+        ]
+    },
+    {
+        "id": "db53c55d.fda7c8",
+        "type": "file",
+        "z": "2537c1c5.0f952e",
+        "name": "Gateway Data",
+        "filename": "/share/gateway.log",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 500,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6b116c6b.d46c34",
+        "type": "mqtt out",
+        "z": "2537c1c5.0f952e",
+        "name": "",
+        "topic": "",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 1330,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "3f33698a.495996",
+        "type": "change",
+        "z": "2537c1c5.0f952e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "prefix",
+                "pt": "msg",
+                "to": "\"Mijia/\" & msg.payload.did",
+                "tot": "jsonata"
+            },
+            {
+                "t": "delete",
+                "p": "payload.cmd",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload.id",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload.time",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload.dev_src",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload.mi_spec",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload.params",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload.did",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 240,
+        "wires": [
+            [
+                "f4b9d80b.407cb8",
+                "444b60dd.67688"
+            ]
+        ]
+    },
+    {
+        "id": "f4b9d80b.407cb8",
+        "type": "debug",
+        "z": "2537c1c5.0f952e",
+        "name": "MQTT",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "$sift(function($v, $k) {$k ~> /^prefix|payload/})",
+        "targetType": "jsonata",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "5541829.511fb7c",
+        "type": "function",
+        "z": "2537c1c5.0f952e",
+        "name": "",
+        "func": "// illuminatino sensors\nif (msg.payload.mi_spec) {\n    if (msg.payload.mi_spec[0].siid == 2) {\n        msg.payload.illuminance = msg.payload.mi_spec[0].value;\n    }\n    if (msg.payload.mi_spec[0].siid == 3) {\n        msg.payload.voltage = msg.payload.mi_spec[0].value;\n    }\n    // calculate battery state from voltage (guess)\n    if (msg.payload.voltage) {\n        var voltage = msg.payload.voltage;\n        \n        msg.payload.battery = 6.25 * voltage - 2581.25 ;\n    }\n}\n\n//sensor_ht report and heartbeat\nif (msg.payload.params) {\n    if(msg.payload.params[0].res_list) {\n        msg.payload.did = msg.payload.params[0].did;\n        if (msg.payload.params[0].res_list[9].res_name == \"0.1.85\") {\n            msg.payload.temperature = msg.payload.params[0].res_list[9].value / 100;\n        }\n        if (msg.payload.params[0].res_list[10].res_name == \"0.2.85\") {\n            msg.payload.humidity = msg.payload.params[0].res_list[10].value / 100;\n        }\n        if (msg.payload.params[0].res_list[0].res_name == \"8.0.2008\") {\n            msg.payload.voltage = msg.payload.params[0].res_list[0].value;\n        }        \n    } else {\n        if (msg.payload.params[0].res_name == \"0.1.85\") {\n            msg.payload.temperature = msg.payload.params[0].value / 100;\n        }\n        if (msg.payload.params[0].res_name == \"0.2.85\") {\n            msg.payload.humidity = msg.payload.params[0].value / 100;\n        }\n        if (msg.payload.params[0].res_name == \"8.0.2008\") {\n           msg.payload.voltage = msg.payload.params[0].value;\n        }\n    }\n    // calculate battery state from voltage (guess)\n    if (msg.payload.voltage) {\n        var voltage = msg.payload.voltage;\n        var percentage = 0;\n            \n        if (voltage < 2100) {\n            percentage = 0;\n        } else if (voltage < 2440) {\n            percentage = 6 - ((2440 - voltage) * 6) / 340;\n        } else if (voltage < 2740) {\n            percentage = 18 - ((2740 - voltage) * 12) / 300;\n        } else if (voltage < 2900) {\n            percentage = 42 - ((2900 - voltage) * 24) / 160;\n        } else if (voltage < 3000) {\n            percentage = 100 - ((3000 - voltage) * 58) / 100;\n        } else if (voltage >= 3000) {\n            percentage = 100;\n        }\n        msg.payload.battery = percentage;\n    }\n}\n\n\nmsg.payload.signal = Math.round(150 - (5/3) * Math.abs(msg.payload.rssi));\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 640,
+        "y": 240,
+        "wires": [
+            [
+                "3f33698a.495996"
+            ]
+        ]
+    },
+    {
+        "id": "444b60dd.67688",
+        "type": "split",
+        "z": "2537c1c5.0f952e",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "topic",
+        "x": 990,
+        "y": 240,
+        "wires": [
+            [
+                "a6654668.e8c6f8"
+            ]
+        ]
+    },
+    {
+        "id": "2fe3d3b3.ef960c",
+        "type": "debug",
+        "z": "2537c1c5.0f952e",
+        "name": "SPLIT",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1330,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9acd5065.674a1",
+        "type": "inject",
+        "z": "2537c1c5.0f952e",
+        "name": "Report",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "qos",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "p": "retain",
+                "v": "false",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "zigbee/send",
+        "payload": "{\"cmd\":\"report\",\"id\":2000001821,\"did\":\"lumi.test\",\"dev_src\":\"0\",\"time\":1594541536692,\"rssi\":-56,\"params\":[{\"res_name\":\"0.1.85\",\"value\":9999}]}",
+        "payloadType": "str",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "b7b0f845.d1b8b8"
+            ]
+        ]
+    },
+    {
+        "id": "a6654668.e8c6f8",
+        "type": "change",
+        "z": "2537c1c5.0f952e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": " msg.prefix & \"/\" & msg.topic",
+                "tot": "jsonata"
+            },
+            {
+                "t": "delete",
+                "p": "prefix",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 240,
+        "wires": [
+            [
+                "2fe3d3b3.ef960c",
+                "6b116c6b.d46c34"
+            ]
+        ]
+    },
+    {
+        "id": "36949d6b.52cfd2",
+        "type": "file",
+        "z": "2537c1c5.0f952e",
+        "name": "Zigbee",
+        "filename": "/share/zigbee.log",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 290,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6bf83599.41022c",
+        "type": "inject",
+        "z": "2537c1c5.0f952e",
+        "name": "Heartbeat",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "qos",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "p": "retain",
+                "v": "false",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "zigbee/send",
+        "payload": "{\"cmd\":\"heartbeat\",\"id\":2000002481,\"time\":1594556196531,\"rssi\":-55,\"params\":[{\"did\":\"lumi.test\",\"time\":1594556196531,\"res_list\":[{\"res_name\":\"8.0.2008\",\"value\":2965},{\"res_name\":\"8.0.2011\",\"value\":1},{\"res_name\":\"8.0.2010\",\"value\":3},{\"res_name\":\"8.0.2012\",\"value\":10},{\"res_name\":\"8.0.2013\",\"value\":1},{\"res_name\":\"8.0.2002\",\"value\":8},{\"res_name\":\"8.0.2003\",\"value\":1},{\"res_name\":\"8.0.2004\",\"value\":0},{\"res_name\":\"8.0.2005\",\"value\":0},{\"res_name\":\"0.1.85\",\"value\":2442},{\"res_name\":\"0.2.85\",\"value\":4444},{\"res_name\":\"8.0.2036\",\"value\":0}]}]}",
+        "payloadType": "str",
+        "x": 100,
+        "y": 320,
+        "wires": [
+            [
+                "b7b0f845.d1b8b8"
+            ]
+        ]
+    },
+    {
+        "id": "74a3758b.97280c",
+        "type": "inject",
+        "z": "2537c1c5.0f952e",
+        "name": "Sen_Ill",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "qos",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "p": "retain",
+                "v": "false",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "zigbee/send",
+        "payload": "{\"cmd\":\"report\",\"id\":2000002282,\"did\":\"lumi.test\",\"dev_src\":\"0\",\"time\":1594554551272,\"rssi\":-67,\"mi_spec\":[{\"siid\":2,\"piid\":1,\"value\":8888}]}",
+        "payloadType": "str",
+        "x": 110,
+        "y": 360,
+        "wires": [
+            [
+                "b7b0f845.d1b8b8"
+            ]
+        ]
+    },
+    {
+        "id": "ea74c2b7.f14a6",
+        "type": "moment",
+        "z": "2537c1c5.0f952e",
+        "name": "Time FMT",
+        "topic": "",
+        "input": "payload.time",
+        "inputType": "msg",
+        "inTz": "Europe/Amsterdam",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "",
+        "locale": "C",
+        "output": "payload.date",
+        "outputType": "msg",
+        "outTz": "Europe/Amsterdam",
+        "x": 440,
+        "y": 240,
+        "wires": [
+            [
+                "5541829.511fb7c"
+            ]
+        ]
+    }
+]
