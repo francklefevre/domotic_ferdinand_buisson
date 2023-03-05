@@ -47,6 +47,14 @@
         "info": ""
     },
     {
+        "id": "9e6027c8096e7614",
+        "type": "tab",
+        "label": "Sonos",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "0181e1b26c9ae404",
         "type": "subflow",
         "name": "Set relais",
@@ -59,6 +67,9 @@
                 "wires": [
                     {
                         "id": "60bd7563fd9a6177"
+                    },
+                    {
+                        "id": "fd73dc5304e335e3"
                     }
                 ]
             }
@@ -550,6 +561,122 @@
         "color": "#DDAA99"
     },
     {
+        "id": "6b9a4b0c3ebbc6a9",
+        "type": "subflow",
+        "name": "Symfonisk",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "cc7675ccd4c2b946"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 580,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "112b3bd46219e9fd",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "112b3bd46219e9fd",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "112b3bd46219e9fd",
+                        "port": 2
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "f29e0fc6a3b512fa",
+        "type": "subflow",
+        "name": "Likea",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 160,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "591bd01f6bba0519"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 660,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "fe15ac82b4406c25",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 660,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "fe15ac82b4406c25",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 660,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "fe15ac82b4406c25",
+                        "port": 2
+                    }
+                ]
+            },
+            {
+                "x": 660,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "fe15ac82b4406c25",
+                        "port": 3
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
         "id": "43acfe3a9b9177ba",
         "type": "mqtt-broker",
         "name": "localhost",
@@ -659,11 +786,18 @@
         "sessionExpiry": ""
     },
     {
+        "id": "88e9fa70.4a53e8",
+        "type": "sonos-config",
+        "name": "Cuisine",
+        "serialnum": "",
+        "ipaddress": "192.168.86.146"
+    },
+    {
         "id": "60bd7563fd9a6177",
         "type": "function",
         "z": "0181e1b26c9ae404",
         "name": "",
-        "func": "var newstate = msg.payload ;\n\nif (msg.relais == undefined)\n    msg.relais = env.get(\"relais\");\nif (msg.canal == undefined)\n    msg.canal = env.get(\"canal\");\nif (msg.etat == undefined)\n    msg.etat = env.get(\"etat\");\n\nmsg.payload = {} ;\nmsg.payload.relay = msg.canal ;\nmsg.payload[\"state_l\" + msg.payload.relay] = msg.etat;\nmsg.payload[\"state\" + msg.payload.relay] = msg.etat;\nmsg.topic = \"zigbee2mqtt/\" + msg.relais + \"/set\";\nreturn msg;\n",
+        "func": "var newstate = msg.payload ;\n\nif (msg.relais == undefined)\n    msg.relais = env.get(\"relais\");\nif (msg.canal == undefined)\n    msg.canal = env.get(\"canal\");\nif (msg.etat == undefined)\n    msg.etat = env.get(\"etat\");\n\nmsg.payload = {} ;\nmsg.payload.relay = msg.relais ;\nif (msg.canal != undefined)\n    msg.payload[\"state_l\" + msg.canal] = msg.etat;\nelse\n    msg.payload[\"state\"] = msg.etat;\nmsg.topic = \"zigbee2mqtt/\" + msg.relais + \"/set\";\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -673,7 +807,8 @@
         "y": 80,
         "wires": [
             [
-                "152c4821852e028a"
+                "152c4821852e028a",
+                "b1970afc29315796"
             ]
         ]
     },
@@ -693,6 +828,39 @@
         "broker": "43acfe3a9b9177ba",
         "x": 390,
         "y": 80,
+        "wires": []
+    },
+    {
+        "id": "b1970afc29315796",
+        "type": "debug",
+        "z": "0181e1b26c9ae404",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "fd73dc5304e335e3",
+        "type": "debug",
+        "z": "0181e1b26c9ae404",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 240,
+        "y": 180,
         "wires": []
     },
     {
@@ -1043,6 +1211,120 @@
         ]
     },
     {
+        "id": "cc7675ccd4c2b946",
+        "type": "function",
+        "z": "6b9a4b0c3ebbc6a9",
+        "name": "",
+        "func": "return msg ;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 100,
+        "wires": [
+            [
+                "112b3bd46219e9fd"
+            ]
+        ]
+    },
+    {
+        "id": "112b3bd46219e9fd",
+        "type": "switch",
+        "z": "6b9a4b0c3ebbc6a9",
+        "name": "",
+        "property": "payload.action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "toggle",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_up",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_down",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "591bd01f6bba0519",
+        "type": "function",
+        "z": "f29e0fc6a3b512fa",
+        "name": "",
+        "func": "return msg ;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 120,
+        "wires": [
+            [
+                "fe15ac82b4406c25"
+            ]
+        ]
+    },
+    {
+        "id": "fe15ac82b4406c25",
+        "type": "switch",
+        "z": "f29e0fc6a3b512fa",
+        "name": "",
+        "property": "payload.action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_left_",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_right_",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 4,
+        "x": 470,
+        "y": 120,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
         "id": "a2a20837e38d5673",
         "type": "mqtt out",
         "z": "10dd252317cb822a",
@@ -1125,7 +1407,8 @@
         "y": 60,
         "wires": [
             [
-                "9424065c4b5f5e38"
+                "9424065c4b5f5e38",
+                "356740695023144e"
             ]
         ]
     },
@@ -1286,6 +1569,22 @@
         "broker": "7be6658fa8d1bfc9",
         "x": 570,
         "y": 380,
+        "wires": []
+    },
+    {
+        "id": "356740695023144e",
+        "type": "debug",
+        "z": "10dd252317cb822a",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 80,
         "wires": []
     },
     {
@@ -1689,8 +1988,8 @@
                 "type": "str"
             }
         ],
-        "x": 620,
-        "y": 500,
+        "x": 460,
+        "y": 700,
         "wires": []
     },
     {
@@ -1736,8 +2035,8 @@
                 "type": "str"
             }
         ],
-        "x": 620,
-        "y": 460,
+        "x": 460,
+        "y": 660,
         "wires": []
     },
     {
@@ -1746,7 +2045,7 @@
         "z": "469b4b2f6211fe88",
         "name": "",
         "topic": "argentan/veranda/salon/toggle",
-        "qos": "",
+        "qos": "2",
         "retain": "",
         "respTopic": "",
         "contentType": "",
@@ -1764,7 +2063,7 @@
         "z": "469b4b2f6211fe88",
         "name": "",
         "topic": "argentan/veranda/jardin/toggle",
-        "qos": "",
+        "qos": "2",
         "retain": "",
         "respTopic": "",
         "contentType": "",
@@ -1789,8 +2088,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 340,
-        "y": 460,
+        "x": 180,
+        "y": 660,
         "wires": [
             [
                 "b670deefdf9cff67"
@@ -1810,8 +2109,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 330,
-        "y": 580,
+        "x": 170,
+        "y": 780,
         "wires": [
             [
                 "0279fe2521e8a12b"
@@ -1835,7 +2134,8 @@
                 "f3f0890b16062d39"
             ],
             [
-                "ffbd57e0453d4001"
+                "ffbd57e0453d4001",
+                "a27a3e278e06ac34"
             ]
         ]
     },
@@ -1852,8 +2152,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 330,
-        "y": 540,
+        "x": 170,
+        "y": 740,
         "wires": [
             [
                 "9a56c4f9e77be27b"
@@ -1866,7 +2166,7 @@
         "z": "469b4b2f6211fe88",
         "name": "",
         "topic": "argentan/veranda/jardin/on",
-        "qos": "",
+        "qos": "2",
         "retain": "",
         "respTopic": "",
         "contentType": "",
@@ -1884,7 +2184,7 @@
         "z": "469b4b2f6211fe88",
         "name": "",
         "topic": "argentan/veranda/jardin/off",
-        "qos": "",
+        "qos": "2",
         "retain": "",
         "respTopic": "",
         "contentType": "",
@@ -1902,7 +2202,7 @@
         "z": "469b4b2f6211fe88",
         "name": "",
         "topic": "argentan/veranda/salon/off",
-        "qos": "",
+        "qos": "2",
         "retain": "",
         "respTopic": "",
         "contentType": "",
@@ -1927,8 +2227,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 340,
-        "y": 500,
+        "x": 180,
+        "y": 700,
         "wires": [
             [
                 "32212a390c7f2ff2"
@@ -1948,8 +2248,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 330,
-        "y": 660,
+        "x": 170,
+        "y": 860,
         "wires": [
             [
                 "c6b7a79496a3fa74"
@@ -1978,8 +2278,8 @@
                 "type": "str"
             }
         ],
-        "x": 620,
-        "y": 580,
+        "x": 460,
+        "y": 780,
         "wires": []
     },
     {
@@ -2000,12 +2300,12 @@
             },
             {
                 "name": "etat",
-                "value": "TOGGLE",
+                "value": "OFF",
                 "type": "str"
             }
         ],
-        "x": 620,
-        "y": 540,
+        "x": 460,
+        "y": 740,
         "wires": []
     },
     {
@@ -2030,8 +2330,8 @@
                 "type": "str"
             }
         ],
-        "x": 620,
-        "y": 660,
+        "x": 460,
+        "y": 860,
         "wires": []
     },
     {
@@ -2047,8 +2347,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 330,
-        "y": 620,
+        "x": 170,
+        "y": 820,
         "wires": [
             [
                 "7a81f6728edfc106"
@@ -2077,8 +2377,8 @@
                 "type": "str"
             }
         ],
-        "x": 620,
-        "y": 620,
+        "x": 460,
+        "y": 820,
         "wires": []
     },
     {
@@ -2087,7 +2387,7 @@
         "z": "469b4b2f6211fe88",
         "name": "",
         "x": 370,
-        "y": 320,
+        "y": 360,
         "wires": [
             [
                 "4e0d9687ee9134f2"
@@ -2109,7 +2409,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 150,
-        "y": 320,
+        "y": 360,
         "wires": [
             [
                 "fa28bf9d0bb76e40"
@@ -2122,25 +2422,7 @@
         "z": "469b4b2f6211fe88",
         "name": "",
         "topic": "argentan/veranda/jardin/on",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "43acfe3a9b9177ba",
-        "x": 800,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "54440a39bdd03a2b",
-        "type": "mqtt out",
-        "z": "469b4b2f6211fe88",
-        "name": "",
-        "topic": "argentan/veranda/salon/on",
-        "qos": "",
+        "qos": "2",
         "retain": "",
         "respTopic": "",
         "contentType": "",
@@ -2150,6 +2432,24 @@
         "broker": "43acfe3a9b9177ba",
         "x": 800,
         "y": 300,
+        "wires": []
+    },
+    {
+        "id": "54440a39bdd03a2b",
+        "type": "mqtt out",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/salon/on",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 800,
+        "y": 340,
         "wires": []
     },
     {
@@ -2164,7 +2464,7 @@
         "finalize": "",
         "libs": [],
         "x": 560,
-        "y": 300,
+        "y": 340,
         "wires": [
             [
                 "34f5545bfd3c23d9",
@@ -2174,123 +2474,161 @@
         ]
     },
     {
-        "id": "fe389d21a8128268",
-        "type": "inject",
+        "id": "a177df741ab1690b",
+        "type": "mqtt in",
         "z": "469b4b2f6211fe88",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 460,
-        "wires": [
-            [
-                "b670deefdf9cff67"
-            ]
-        ]
-    },
-    {
-        "id": "1d2063ddf78a7bfa",
-        "type": "inject",
-        "z": "469b4b2f6211fe88",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
+        "topic": "zigbee2mqtt/X003",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
         "y": 500,
         "wires": [
             [
-                "32212a390c7f2ff2"
+                "26a0b1266a2ca2b4",
+                "6e58c09919bf61fd"
             ]
         ]
     },
     {
-        "id": "44819703ccb0a548",
-        "type": "inject",
+        "id": "26a0b1266a2ca2b4",
+        "type": "subflow:f29e0fc6a3b512fa",
         "z": "469b4b2f6211fe88",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 540,
+        "x": 410,
+        "y": 500,
         "wires": [
             [
-                "9a56c4f9e77be27b"
+                "580569fb82cd947c",
+                "468140714999e2af"
+            ],
+            [
+                "4d35aa433dd205c8",
+                "2302bcd015178ea2"
+            ],
+            [
+                "580569fb82cd947c",
+                "2302bcd015178ea2"
+            ],
+            [
+                "468140714999e2af",
+                "4d35aa433dd205c8"
             ]
         ]
     },
     {
-        "id": "5da405da6a434de4",
-        "type": "inject",
+        "id": "580569fb82cd947c",
+        "type": "mqtt out",
         "z": "469b4b2f6211fe88",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
+        "topic": "argentan/veranda/jardin/on",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 740,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "468140714999e2af",
+        "type": "mqtt out",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/salon/on",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 740,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "4d35aa433dd205c8",
+        "type": "mqtt out",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/jardin/off",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 740,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "2302bcd015178ea2",
+        "type": "mqtt out",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/salon/off",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 740,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "6e58c09919bf61fd",
+        "type": "debug",
+        "z": "469b4b2f6211fe88",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
         "y": 580,
-        "wires": [
-            [
-                "0279fe2521e8a12b"
-            ]
-        ]
+        "wires": []
     },
     {
-        "id": "5e08b77d7071f66e",
+        "id": "a27a3e278e06ac34",
+        "type": "mqtt out",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "argentan/veranda/salon/on",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 740,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1cad1e8debe8e3fc",
         "type": "inject",
         "z": "469b4b2f6211fe88",
         "name": "",
@@ -2310,40 +2648,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
+        "x": 220,
         "y": 620,
         "wires": [
             [
-                "7a81f6728edfc106"
-            ]
-        ]
-    },
-    {
-        "id": "8a431ab29bd04258",
-        "type": "inject",
-        "z": "469b4b2f6211fe88",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 660,
-        "wires": [
-            [
-                "c6b7a79496a3fa74"
+                "32212a390c7f2ff2"
             ]
         ]
     },
@@ -3718,5 +4027,458 @@
                 "5541829.511fb7c"
             ]
         ]
+    },
+    {
+        "id": "71d34ef1.1c242",
+        "type": "sonos-universal",
+        "z": "9e6027c8096e7614",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.tunein",
+        "state": "s2442",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 730,
+        "y": 100,
+        "wires": [
+            [
+                "8a99af40fc6afb11"
+            ]
+        ]
+    },
+    {
+        "id": "a2c2b3bd.e1b71",
+        "type": "inject",
+        "z": "9e6027c8096e7614",
+        "name": "trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 730,
+        "y": 660,
+        "wires": [
+            [
+                "9c0a7e9e.9bca6"
+            ]
+        ]
+    },
+    {
+        "id": "9c0a7e9e.9bca6",
+        "type": "sonos-universal",
+        "z": "9e6027c8096e7614",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.queue",
+        "state": "",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 896,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2fb9a1fd.68737e",
+        "type": "inject",
+        "z": "9e6027c8096e7614",
+        "name": "trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 660,
+        "wires": [
+            [
+                "37f90c94.f24384"
+            ]
+        ]
+    },
+    {
+        "id": "37f90c94.f24384",
+        "type": "sonos-universal",
+        "z": "9e6027c8096e7614",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "household.create.group",
+        "state": "SonosKueche,SonosWohnzimmer,SonosBad",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 318.5,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a4203acd.9aa738",
+        "type": "comment",
+        "z": "9e6027c8096e7614",
+        "name": "Play the SONOS queue - must not be empty - read me",
+        "info": "# Play the SONOS queue\n\n## Customizing\n- edit `group.play.queue `and select your configuration node.\n\nEnsure that the queue is filled with songs. You can to that either with this package or with the SONOS app.",
+        "x": 880,
+        "y": 600,
+        "wires": [],
+        "icon": "node-red/subflow.svg"
+    },
+    {
+        "id": "d013ff60.44585",
+        "type": "comment",
+        "z": "9e6027c8096e7614",
+        "name": "Create a group with 3 Sonos-Player - read me",
+        "info": "# Create a group with 3 Sonos-Player\nFirst player is coordinator.\n\n## Customizing\n- edit `household.create.group`\n    - select any configuration nodee\n    - edit payload and enter Sonos-Playernams (not the config node names), seperated by comma but without any blank\n\n",
+        "x": 250,
+        "y": 620,
+        "wires": [],
+        "icon": "node-red/subflow.svg"
+    },
+    {
+        "id": "9332b5ce.6f61d8",
+        "type": "inject",
+        "z": "9e6027c8096e7614",
+        "name": "trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 800,
+        "wires": [
+            [
+                "ecf7c75f.c060b8"
+            ]
+        ]
+    },
+    {
+        "id": "ecf7c75f.c060b8",
+        "type": "sonos-universal",
+        "z": "9e6027c8096e7614",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "household.get.groups",
+        "state": "",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 306,
+        "y": 800,
+        "wires": [
+            [
+                "ddbaa9b2.3788b8"
+            ]
+        ]
+    },
+    {
+        "id": "a98e0bd0.e64db8",
+        "type": "comment",
+        "z": "9e6027c8096e7614",
+        "name": "Test - all players detected - read me",
+        "info": "# Test - all players detected\n\n## Use case\ncheck your installation and verify that all players are online.\n\n## Customizing\n- edit `household.get.groups`and select your configuration node.",
+        "x": 220,
+        "y": 751,
+        "wires": [],
+        "icon": "node-red/subflow.svg"
+    },
+    {
+        "id": "ddbaa9b2.3788b8",
+        "type": "debug",
+        "z": "9e6027c8096e7614",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 502,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "bd45739.842a39",
+        "type": "comment",
+        "z": "9e6027c8096e7614",
+        "name": "Test - what is currently playing - read me",
+        "info": "# Test - what is currently playing\n\n## Use case\nGet information what is currently playing\n\n## Customizing\n - edit `household.get.trackplus`and select your configuration node.",
+        "x": 240,
+        "y": 480,
+        "wires": [],
+        "icon": "node-red/subflow.svg"
+    },
+    {
+        "id": "ee9dd47a.6d2d08",
+        "type": "inject",
+        "z": "9e6027c8096e7614",
+        "name": "trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 528,
+        "wires": [
+            [
+                "3cf7e92f.54c756"
+            ]
+        ]
+    },
+    {
+        "id": "3cf7e92f.54c756",
+        "type": "sonos-universal",
+        "z": "9e6027c8096e7614",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.get.trackplus",
+        "state": "",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 298.5,
+        "y": 528,
+        "wires": [
+            [
+                "c708c82a.fe2fb8"
+            ]
+        ]
+    },
+    {
+        "id": "c708c82a.fe2fb8",
+        "type": "debug",
+        "z": "9e6027c8096e7614",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 487,
+        "y": 528,
+        "wires": []
+    },
+    {
+        "id": "acd8d32553286a50",
+        "type": "inject",
+        "z": "9e6027c8096e7614",
+        "name": "trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 730,
+        "y": 800,
+        "wires": [
+            [
+                "dbc0d72e5cfef842"
+            ]
+        ]
+    },
+    {
+        "id": "dbc0d72e5cfef842",
+        "type": "sonos-universal",
+        "z": "9e6027c8096e7614",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.library.artist",
+        "state": "Beatles",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 912,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7bc75035f27ceafb",
+        "type": "comment",
+        "z": "9e6027c8096e7614",
+        "name": "Play Beatles from your Music library - read me",
+        "info": "# Play Beatles from your Music library\n\n## Customizing \n- in `household.create.group`\n    - select your configuration node.\n    - edit payload and enter the name of a beatles album on your music library\n \n\n",
+        "x": 850,
+        "y": 732,
+        "wires": [],
+        "icon": "node-red/subflow.svg"
+    },
+    {
+        "id": "82e09b4c13c8a849",
+        "type": "sonos-universal",
+        "z": "9e6027c8096e7614",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.adjust.volume",
+        "state": "10",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 742.5,
+        "y": 160,
+        "wires": [
+            [
+                "a6c1c1826d2758cb"
+            ]
+        ]
+    },
+    {
+        "id": "a6c1c1826d2758cb",
+        "type": "debug",
+        "z": "9e6027c8096e7614",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 944,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "98e2bc711c2ebe6d",
+        "type": "sonos-universal",
+        "z": "9e6027c8096e7614",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.adjust.volume",
+        "state": "-10",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 742.5,
+        "y": 220,
+        "wires": [
+            [
+                "52ed83b965aeb76f"
+            ]
+        ]
+    },
+    {
+        "id": "52ed83b965aeb76f",
+        "type": "debug",
+        "z": "9e6027c8096e7614",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 944,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "322fd2fe67eda753",
+        "type": "mqtt in",
+        "z": "9e6027c8096e7614",
+        "name": "",
+        "topic": "zigbee2mqtt/X002",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 164,
+        "y": 160,
+        "wires": [
+            [
+                "b25bdb857e0bb01b"
+            ]
+        ]
+    },
+    {
+        "id": "b25bdb857e0bb01b",
+        "type": "subflow:6b9a4b0c3ebbc6a9",
+        "z": "9e6027c8096e7614",
+        "name": "",
+        "x": 374,
+        "y": 160,
+        "wires": [
+            [
+                "71d34ef1.1c242"
+            ],
+            [
+                "82e09b4c13c8a849"
+            ],
+            [
+                "98e2bc711c2ebe6d"
+            ]
+        ]
+    },
+    {
+        "id": "8a99af40fc6afb11",
+        "type": "debug",
+        "z": "9e6027c8096e7614",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 100,
+        "wires": []
     }
 ]

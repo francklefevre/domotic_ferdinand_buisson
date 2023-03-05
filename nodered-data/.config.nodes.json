@@ -445,5 +445,46 @@
                 "file": "/data/node_modules/node-red-contrib-moment/moment/nrhumanizer.js"
             }
         }
+    },
+    "node-red-contrib-sonos-plus": {
+        "name": "node-red-contrib-sonos-plus",
+        "version": "6.6.1",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "sonos-config": {
+                "name": "sonos-config",
+                "types": [
+                    "sonos-config"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-sonos-plus",
+                "file": "/data/node_modules/node-red-contrib-sonos-plus/src/sonos-config.js"
+            },
+            "sonos-manage-mysonos": {
+                "name": "sonos-manage-mysonos",
+                "types": [
+                    "sonos-manage-mysonos"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-sonos-plus",
+                "file": "/data/node_modules/node-red-contrib-sonos-plus/src/sonos-manage-mysonos.js"
+            },
+            "sonos-universal": {
+                "name": "sonos-universal",
+                "types": [
+                    "sonos-universal"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-sonos-plus",
+                "file": "/data/node_modules/node-red-contrib-sonos-plus/src/sonos-universal.js"
+            }
+        }
     }
 }
