@@ -67,9 +67,6 @@
                 "wires": [
                     {
                         "id": "60bd7563fd9a6177"
-                    },
-                    {
-                        "id": "fd73dc5304e335e3"
                     }
                 ]
             }
@@ -807,8 +804,7 @@
         "y": 80,
         "wires": [
             [
-                "152c4821852e028a",
-                "b1970afc29315796"
+                "152c4821852e028a"
             ]
         ]
     },
@@ -828,39 +824,6 @@
         "broker": "43acfe3a9b9177ba",
         "x": 390,
         "y": 80,
-        "wires": []
-    },
-    {
-        "id": "b1970afc29315796",
-        "type": "debug",
-        "z": "0181e1b26c9ae404",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 380,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "fd73dc5304e335e3",
-        "type": "debug",
-        "z": "0181e1b26c9ae404",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 240,
-        "y": 180,
         "wires": []
     },
     {
@@ -1536,7 +1499,7 @@
         "type": "function",
         "z": "10dd252317cb822a",
         "name": "",
-        "func": "var newMsg = {} ;\nmsg.topic = msg.topic.substring(12) ;\n\nif (msg.payload.battery !== undefined) { // To monitor the battery\n    newMsg.topic = \"argentan/zigbee2mqtt/\" + msg.topic + \"/batterie\";\n    newMsg.payload = msg.payload.battery;\n    node.send([null, newMsg]);\n}\n\nif (msg.payload.device_temperature !== undefined) { \n    newMsg.topic = \"argentan/zigbee2mqtt/\" + msg.topic + \"/temperature\";\n    newMsg.payload = msg.payload.device_temperature;\n    node.send([null, newMsg]);\n}\n\n\nif (msg.payload.consumption !== undefined) { \n    newMsg.topic = \"argentan/zigbee2mqtt/\" + msg.topic + \"/consumption\";\n    newMsg.payload = msg.payload.consumption;\n    node.send([null, newMsg]);\n}\n\n\nif (msg.payload.power !== undefined) {\n    newMsg.topic = \"argentan/zigbee2mqtt/\" + msg.topic + \"/power\";\n    newMsg.payload = msg.payload.power;\n    node.send([null, newMsg]);\n}\n\nreturn ([msg, null]);\n",
+        "func": "var newMsg = {} ;\nmsg.topic = msg.topic.substring(12) ;\n\nif (msg.payload.battery !== undefined) { // To monitor the battery\n    newMsg.topic = \"argentan/zigbee2mqtt/\" + msg.topic + \"/batterie\";\n    newMsg.payload = msg.payload.battery;\n    node.send([null, newMsg]);\n}\n\nif (msg.payload.device_temperature !== undefined) { \n    newMsg.topic = \"argentan/zigbee2mqtt/\" + msg.topic + \"/temperature\";\n    newMsg.payload = msg.payload.device_temperature;\n    node.send([null, newMsg]);\n}\nif (msg.payload.local_temperature !== undefined) {\n    newMsg.topic = \"argentan/zigbee2mqtt/\" + msg.topic + \"/temperature\";\n    newMsg.payload = msg.payload.local_temperature;\n    node.send([null, newMsg]);\n}\n\n\nif (msg.payload.consumption !== undefined) { \n    newMsg.topic = \"argentan/zigbee2mqtt/\" + msg.topic + \"/consumption\";\n    newMsg.payload = msg.payload.consumption;\n    node.send([null, newMsg]);\n}\n\n\nif (msg.payload.power !== undefined) {\n    newMsg.topic = \"argentan/zigbee2mqtt/\" + msg.topic + \"/power\";\n    newMsg.payload = msg.payload.power;\n    node.send([null, newMsg]);\n}\n\nreturn ([msg, null]);\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -1841,7 +1804,7 @@
         "type": "debug",
         "z": "f03cfb04ffe21e70",
         "name": "debug 8",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1951,6 +1914,44 @@
         ],
         "x": 730,
         "y": 460,
+        "wires": []
+    },
+    {
+        "id": "d3fbbee1551c98ef",
+        "type": "mqtt in",
+        "z": "f03cfb04ffe21e70",
+        "name": "",
+        "topic": "zigbee2mqtt/T001",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 740,
+        "wires": [
+            [
+                "be6b6766cb81c3c1"
+            ]
+        ]
+    },
+    {
+        "id": "be6b6766cb81c3c1",
+        "type": "debug",
+        "z": "f03cfb04ffe21e70",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 740,
         "wires": []
     },
     {
@@ -2598,7 +2599,7 @@
         "type": "debug",
         "z": "469b4b2f6211fe88",
         "name": "debug 10",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3541,6 +3542,31 @@
         "wires": []
     },
     {
+        "id": "9b2693dd2bbf878f",
+        "type": "inject",
+        "z": "f478c30160855d4f",
+        "name": "",
+        "props": [
+            {
+                "p": "color",
+                "v": "#DD6900",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 210,
+        "y": 540,
+        "wires": [
+            [
+                "9c0decd82922d363"
+            ]
+        ]
+    },
+    {
         "id": "4963be5.b45044",
         "type": "mqtt in",
         "z": "2537c1c5.0f952e",
@@ -4384,10 +4410,11 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 944,
+        "x": 924,
         "y": 160,
         "wires": []
     },
@@ -4418,10 +4445,11 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 944,
+        "x": 924,
         "y": 220,
         "wires": []
     },
@@ -4470,15 +4498,74 @@
         "type": "debug",
         "z": "9e6027c8096e7614",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
+        "x": 930,
         "y": 100,
         "wires": []
+    },
+    {
+        "id": "55979668830dc38b",
+        "type": "inject",
+        "z": "9e6027c8096e7614",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 440,
+        "y": 240,
+        "wires": [
+            [
+                "82e09b4c13c8a849"
+            ]
+        ]
+    },
+    {
+        "id": "2cea0c36020111c5",
+        "type": "inject",
+        "z": "9e6027c8096e7614",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "98e2bc711c2ebe6d"
+            ]
+        ]
     }
 ]

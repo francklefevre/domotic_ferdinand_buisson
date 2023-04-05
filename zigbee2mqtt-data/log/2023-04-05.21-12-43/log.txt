@@ -1,0 +1,212 @@
+info  2023-04-05 21:12:43: Logging to console and directory: '/app/data/log/2023-04-05.21-12-43' filename: log.txt
+info  2023-04-05 21:12:43: Starting Zigbee2MQTT version 1.30.3 (commit #24c6b2e)
+info  2023-04-05 21:12:43: Starting zigbee-herdsman (0.14.103)
+info  2023-04-05 21:12:45: zigbee-herdsman started (resumed)
+info  2023-04-05 21:12:45: Coordinator firmware version: '{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20210708,"transportrev":2},"type":"zStack3x0"}'
+info  2023-04-05 21:12:45: Currently 28 devices are joined:
+info  2023-04-05 21:12:45: P001 (0x00158d00058a83de): RTCGQ11LM - Xiaomi Aqara human body movement and illuminance sensor (EndDevice)
+info  2023-04-05 21:12:45: R001 (0x00158d00058e1586): LLKZMK11LM - Xiaomi Aqara wireless relay controller (Router)
+info  2023-04-05 21:12:45: A001 (0x00158d00053039d3): ZNLDP12LM - Xiaomi Aqara smart LED bulb (Router)
+info  2023-04-05 21:12:45: A002 (0x00158d000520ad81): ZNLDP12LM - Xiaomi Aqara smart LED bulb (Router)
+info  2023-04-05 21:12:45: I001 (0x00158d000456c6aa): WXKG03LM_rev2 - Xiaomi Aqara single key wireless wall switch (2018 model) (EndDevice)
+info  2023-04-05 21:12:45: I002 (0x00158d00045500bb): WXKG03LM_rev2 - Xiaomi Aqara single key wireless wall switch (2018 model) (EndDevice)
+info  2023-04-05 21:12:45: R002 (0x00158d00058e159d): LLKZMK11LM - Xiaomi Aqara wireless relay controller (Router)
+info  2023-04-05 21:12:45: I003 (0x00158d000464fbc6): WXKG03LM_rev2 - Xiaomi Aqara single key wireless wall switch (2018 model) (EndDevice)
+info  2023-04-05 21:12:45: P002 (0x00158d0005827863): RTCGQ11LM - Xiaomi Aqara human body movement and illuminance sensor (EndDevice)
+info  2023-04-05 21:12:45: A003 (0x000d6ffffe0538f7): LED1624G9 - IKEA TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white (Router)
+info  2023-04-05 21:12:45: X001 (0x000d6ffffe0e6cfb): E1524/E1810 - IKEA TRADFRI remote control (EndDevice)
+info  2023-04-05 21:12:45: A004 (0x000d6ffffe055141): LED1624G9 - IKEA TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white (Router)
+info  2023-04-05 21:12:45: A005 (0x000d6ffffe0e8e2c): LED1624G9 - IKEA TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white (Router)
+info  2023-04-05 21:12:45: I004 (0x00158d00046516c8): WXKG03LM_rev2 - Xiaomi Aqara single key wireless wall switch (2018 model) (EndDevice)
+info  2023-04-05 21:12:45: A006 (0x00158d000520ef8d): ZNLDP12LM - Xiaomi Aqara smart LED bulb (Router)
+info  2023-04-05 21:12:45: A007 (0x00158d0005730fc6): ZNLDP12LM - Xiaomi Aqara smart LED bulb (Router)
+info  2023-04-05 21:12:45: I005 (0x00158d0003facd3d): WXKG03LM_rev2 - Xiaomi Aqara single key wireless wall switch (2018 model) (EndDevice)
+info  2023-04-05 21:12:45: A008 (0x00158d000520f1b2): ZNLDP12LM - Xiaomi Aqara smart LED bulb (Router)
+info  2023-04-05 21:12:45: C001 (0x00158d00054b89f1): MFKZQ01LM - Xiaomi Mi/Aqara smart home cube (EndDevice)
+info  2023-04-05 21:12:45: L001 (0x003c84fffec3e3da): HG06104A - Lidl Livarno Lux smart LED light strip 2.5m (Router)
+info  2023-04-05 21:12:45: A009 (0xcc86ecfffe1e71e3): HG06492C - Lidl Livarno Lux E27 bulb CCT (Router)
+info  2023-04-05 21:12:45: P003 (0x2c1165fffe8405f6): HG06335/HG07310 - Lidl Silvercrest smart motion sensor (EndDevice)
+info  2023-04-05 21:12:45: A010 (0x2c1165fffec74eff): HG07834B - Lidl Livarno Lux E14 candle RGB (Router)
+info  2023-04-05 21:12:45: A011 (0x0017880102d22996): 8718696449691 - Philips Hue White A60 Single bulb E27/B22 (Router)
+info  2023-04-05 21:12:45: 0x84ba20fffe28b03b (0x84ba20fffe28b03b): TS0601_thermostat_3 - TuYa Thermostatic radiator valve (EndDevice)
+info  2023-04-05 21:12:45: R003 (0xa4c1389b82055bd6): WHD02 - TuYa Wall switch module (Router)
+info  2023-04-05 21:12:45: X002 (0x14b457fffe6c11f3): E1744 - IKEA SYMFONISK sound controller (EndDevice)
+info  2023-04-05 21:12:45: X003 (0x040d84fffeac3a17): E2001/E2002 - IKEA STYRBAR remote control (EndDevice)
+warn  2023-04-05 21:12:45: `permit_join` set to  `true` in configuration.yaml.
+warn  2023-04-05 21:12:45: Allowing new devices to join.
+warn  2023-04-05 21:12:45: Set `permit_join` to `false` once you joined all devices.
+info  2023-04-05 21:12:45: Zigbee: allowing new devices to join.
+info  2023-04-05 21:12:45: Connecting to MQTT server at mqtt://mqtt
+info  2023-04-05 21:12:46: Connected to MQTT server
+info  2023-04-05 21:12:46: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload '{"state":"online"}'
+info  2023-04-05 21:12:46: MQTT publish: topic 'zigbee2mqtt/901/availability', payload '{"state":"online"}'
+info  2023-04-05 21:12:47: Started frontend on port 0.0.0.0:8080
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/P001', payload '{"battery":100,"device_temperature":17,"illuminance":0,"illuminance_lux":0,"linkquality":18,"occupancy":false,"power_outage_count":16,"voltage":3075}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/R001', payload '{"consumption":0.19,"current":0.005,"device_temperature":22,"energy":0.19,"linkquality":33,"power":0,"power_outage_count":17,"state_l1":"ON","state_l2":"ON","update":{"state":"idle"},"voltage":230.5}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/A001', payload '{"brightness":229,"color_mode":"color_temp","color_temp":327,"linkquality":87,"state":"OFF"}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/A002', payload '{"brightness":229,"color_mode":"color_temp","color_temp":327,"linkquality":87,"state":"OFF"}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/I001', payload '{"battery":3,"device_temperature":23,"linkquality":51,"power_outage_count":31,"voltage":2855}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/I002', payload '{"battery":100,"device_temperature":20,"linkquality":51,"power_outage_count":5680,"voltage":3305}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.62,"current":0.2903,"device_temperature":22,"energy":15.62,"linkquality":12,"power":65.5,"power_outage_count":44,"state":"ON","state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":228.4}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/I003', payload '{"battery":100,"device_temperature":23,"linkquality":12,"power_outage_count":125,"voltage":3055}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":7,"illuminance_lux":7,"linkquality":114,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/A003', payload '{"brightness":0,"color":{"x":0.6184,"y":0.369},"color_mode":"xy","color_temp":454,"linkquality":3,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/X001', payload '{"battery":21,"linkquality":114,"update":{"state":"available"}}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/A004', payload '{"brightness":0,"color":{"x":0.6184,"y":0.369},"color_mode":"xy","color_temp":454,"linkquality":21,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/A005', payload '{"brightness":0,"color":{"x":0.6184,"y":0.369},"color_mode":"xy","color_temp":454,"linkquality":21,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/I004', payload '{"battery":83,"device_temperature":27,"linkquality":66,"power_outage_count":25,"voltage":2975}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/A006', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":78,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/A007', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":75,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/I005', payload '{"battery":100,"device_temperature":20,"linkquality":78,"power_outage_count":18,"voltage":3025}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/A008', payload '{"brightness":254,"color_mode":"color_temp","color_temp":370,"linkquality":15,"state":"ON"}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/C001', payload '{"battery":57,"current":0,"device_temperature":17,"linkquality":78,"power":3543,"power_outage_count":150,"side":4,"voltage":2935}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/L001', payload '{"brightness":56,"color":{"x":0.5405,"y":0.2395},"color_mode":"xy","color_temp":132,"linkquality":0,"state":"ON"}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/A009', payload '{"brightness":51,"color_mode":"color_temp","color_temp":370,"linkquality":3,"state":"ON"}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/P003', payload '{"battery":100,"battery_low":false,"linkquality":36,"occupancy":true,"tamper":false,"voltage":3200}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/A010', payload '{"brightness":60,"color":{"x":0.5164,"y":0.3138},"color_mode":"xy","linkquality":0,"state":"ON"}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/A011', payload '{"brightness":108,"linkquality":33,"state":"ON"}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":117,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/X002', payload '{"battery":87,"linkquality":3,"update":{"state":"available"}}'
+info  2023-04-05 21:12:47: MQTT publish: topic 'zigbee2mqtt/X003', payload '{"battery":100,"linkquality":18,"update":{"state":"idle"}}'
+info  2023-04-05 21:12:47: Zigbee2MQTT started!
+info  2023-04-05 21:12:53: Zigbee: disabling joining new devices.
+info  2023-04-05 21:12:53: MQTT publish: topic 'zigbee2mqtt/bridge/response/permit_join', payload '{"data":{"time":254,"value":false},"status":"ok","transaction":"9tx4q-1"}'
+error 2023-04-05 21:13:09: Publish 'set' 'state' to 'A009' failed: 'Error: Command 0xcc86ecfffe1e71e3/1 genOnOff.toggle({}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (Data request failed with error: 'No network route' (205))'
+error 2023-04-05 21:13:09: No converter available for 'color' ({"hex":"#FF0000"})
+info  2023-04-05 21:13:12: MQTT publish: topic 'zigbee2mqtt/0x84ba20fffe28b03b', payload ''
+info  2023-04-05 21:13:12: MQTT publish: topic 'zigbee2mqtt/bridge/response/device/rename', payload '{"data":{"from":"0x84ba20fffe28b03b","homeassistant_rename":false,"to":"T001"},"status":"ok","transaction":"9tx4q-2"}'
+info  2023-04-05 21:13:14: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.64,"current":0.28,"device_temperature":26,"energy":15.64,"linkquality":78,"power":63.92,"power_outage_count":44,"state":"ON","state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":235.23}'
+info  2023-04-05 21:14:44: Configuring 'T001'
+info  2023-04-05 21:14:44: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"linkquality":36,"system_mode":"heat"}'
+info  2023-04-05 21:14:44: Successfully configured 'T001'
+info  2023-04-05 21:14:44: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":8,"linkquality":33,"system_mode":"heat"}'
+info  2023-04-05 21:14:49: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":39,"system_mode":"heat"}'
+info  2023-04-05 21:15:14: MQTT publish: topic 'zigbee2mqtt/A006', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":69,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:15:20: MQTT publish: topic 'zigbee2mqtt/A007', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":78,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:15:23: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"X002","ieee_address":"0x14b457fffe6c11f3"},"type":"device_announce"}'
+info  2023-04-05 21:15:33: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":4,"illuminance_lux":4,"linkquality":78,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:15:33: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":4,"illuminance_lux":4,"linkquality":78,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:16:35: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"X002","ieee_address":"0x14b457fffe6c11f3"},"type":"device_announce"}'
+info  2023-04-05 21:17:03: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":4,"illuminance_lux":4,"linkquality":78,"occupancy":false,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:18:19: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.64,"current":0.27,"device_temperature":27,"energy":15.64,"linkquality":114,"power":63.37,"power_outage_count":44,"state":"ON","state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":235.01}'
+info  2023-04-05 21:20:59: MQTT publish: topic 'zigbee2mqtt/A007', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":78,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:21:26: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:21:40: MQTT publish: topic 'zigbee2mqtt/A006', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":72,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:22:52: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":78,"occupancy":false,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:24:32: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.65,"current":0.27,"device_temperature":30,"energy":15.65,"linkquality":114,"power":63.41,"power_outage_count":44,"state":"ON","state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":235.29}'
+info  2023-04-05 21:25:14: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":114,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:25:14: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":114,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:26:12: MQTT publish: topic 'zigbee2mqtt/A007', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":78,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:26:24: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":114,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:26:24: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":114,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:26:58: MQTT publish: topic 'zigbee2mqtt/A006', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":78,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:27:54: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":114,"occupancy":false,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:28:46: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":117,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:28:46: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":114,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:30:16: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":114,"occupancy":false,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:30:47: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.65,"current":0.27,"device_temperature":33,"energy":15.65,"linkquality":114,"power":63.57,"power_outage_count":44,"state":"ON","state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":237.94}'
+info  2023-04-05 21:31:36: MQTT publish: topic 'zigbee2mqtt/A007', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":78,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:32:43: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":114,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:32:43: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":114,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:32:53: MQTT publish: topic 'zigbee2mqtt/A006', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":78,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:34:13: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":114,"occupancy":false,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:35:32: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":4,"illuminance_lux":4,"linkquality":114,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:35:32: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":4,"illuminance_lux":4,"linkquality":114,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:36:36: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.66,"current":0.27,"device_temperature":35,"energy":15.66,"linkquality":114,"power":63.55,"power_outage_count":44,"state":"ON","state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":236.89}'
+info  2023-04-05 21:37:02: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":4,"illuminance_lux":4,"linkquality":114,"occupancy":false,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:37:10: MQTT publish: topic 'zigbee2mqtt/A007', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":78,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:38:45: MQTT publish: topic 'zigbee2mqtt/A006', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":81,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:41:02: MQTT publish: topic 'zigbee2mqtt/X003', payload '{"battery":100,"linkquality":15,"update":{"state":"idle"}}'
+info  2023-04-05 21:42:47: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.67,"current":0.27,"device_temperature":38,"energy":15.67,"linkquality":114,"power":63.08,"power_outage_count":44,"state":"ON","state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":234.7}'
+info  2023-04-05 21:42:47: MQTT publish: topic 'zigbee2mqtt/P001', payload '{"battery":100,"device_temperature":16,"illuminance":3,"illuminance_lux":3,"linkquality":27,"occupancy":false,"power_outage_count":16,"voltage":3075}'
+info  2023-04-05 21:42:47: MQTT publish: topic 'zigbee2mqtt/P001', payload '{"battery":100,"device_temperature":16,"illuminance":3,"illuminance_lux":3,"linkquality":27,"occupancy":false,"power_outage_count":16,"voltage":3075}'
+info  2023-04-05 21:43:26: MQTT publish: topic 'zigbee2mqtt/A007', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":78,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:44:25: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:44:28: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:44:31: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:44:34: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:44:37: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:44:40: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:44:41: MQTT publish: topic 'zigbee2mqtt/C001', payload '{"battery":57,"current":0,"device_temperature":17,"linkquality":78,"power":3543,"power_outage_count":150,"side":4,"voltage":2935}'
+info  2023-04-05 21:44:43: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:44:45: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":114,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:44:45: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":111,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:44:46: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":54,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:44:49: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:44:52: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:44:55: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:44:58: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:45:01: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:45:03: MQTT publish: topic 'zigbee2mqtt/A006', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":78,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:45:04: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:45:07: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:45:27: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:45:30: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:45:33: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:45:36: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:45:39: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":13,"system_mode":"heat"}'
+info  2023-04-05 21:45:42: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:45:45: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":13,"system_mode":"heat"}'
+info  2023-04-05 21:45:48: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:45:51: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:45:54: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":13,"system_mode":"heat"}'
+info  2023-04-05 21:45:57: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":13,"system_mode":"heat"}'
+info  2023-04-05 21:46:00: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:46:03: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:46:06: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":13,"system_mode":"heat"}'
+info  2023-04-05 21:46:06: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":111,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:46:06: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":114,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:46:09: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":13,"system_mode":"heat"}'
+info  2023-04-05 21:46:12: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":13,"system_mode":"heat"}'
+info  2023-04-05 21:46:15: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":13,"system_mode":"heat"}'
+info  2023-04-05 21:46:18: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:46:21: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":13,"system_mode":"heat"}'
+info  2023-04-05 21:46:24: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":13,"system_mode":"heat"}'
+info  2023-04-05 21:46:27: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:46:30: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":13,"system_mode":"heat"}'
+info  2023-04-05 21:46:33: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":48,"local_temperature":14,"system_mode":"heat"}'
+info  2023-04-05 21:46:36: MQTT publish: topic 'zigbee2mqtt/T001', payload '{"current_heating_setpoint":13,"linkquality":51,"local_temperature":13,"system_mode":"heat"}'
+info  2023-04-05 21:47:36: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":114,"occupancy":false,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:47:59: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.67,"current":0.28,"device_temperature":39,"energy":15.67,"linkquality":114,"power":63.25,"power_outage_count":44,"state":"ON","state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":232.38}'
+info  2023-04-05 21:48:50: MQTT publish: topic 'zigbee2mqtt/A007', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":78,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:51:25: MQTT publish: topic 'zigbee2mqtt/A006', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":78,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:52:35: MQTT publish: topic 'zigbee2mqtt/I005', payload '{"battery":100,"device_temperature":20,"linkquality":78,"power_outage_count":18,"voltage":3015}'
+info  2023-04-05 21:53:49: MQTT publish: topic 'zigbee2mqtt/I003', payload '{"battery":100,"device_temperature":23,"linkquality":111,"power_outage_count":125,"voltage":3055}'
+info  2023-04-05 21:53:58: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.68,"current":0.27,"device_temperature":41,"energy":15.68,"linkquality":111,"power":63.33,"power_outage_count":44,"state":"ON","state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":233.73}'
+info  2023-04-05 21:54:07: MQTT publish: topic 'zigbee2mqtt/A003', payload '{"brightness":0,"color":{"x":0.6184,"y":0.369},"color_mode":"xy","color_temp":454,"linkquality":24,"state":"OFF","update":{"installed_version":318805362,"latest_version":587753009,"state":"available"}}'
+info  2023-04-05 21:54:07: Update available for 'A003'
+info  2023-04-05 21:54:25: MQTT publish: topic 'zigbee2mqtt/A007', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":78,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:55:08: MQTT publish: topic 'zigbee2mqtt/A005', payload '{"brightness":0,"color":{"x":0.6184,"y":0.369},"color_mode":"xy","color_temp":454,"linkquality":12,"state":"OFF","update":{"installed_version":318767730,"latest_version":587753009,"state":"available"}}'
+info  2023-04-05 21:55:08: Update available for 'A005'
+info  2023-04-05 21:55:34: MQTT publish: topic 'zigbee2mqtt/A004', payload '{"brightness":0,"color":{"x":0.6184,"y":0.369},"color_mode":"xy","color_temp":454,"linkquality":18,"state":"OFF","update":{"installed_version":318767730,"latest_version":587753009,"state":"available"}}'
+info  2023-04-05 21:55:34: Update available for 'A004'
+info  2023-04-05 21:55:51: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":4,"illuminance_lux":4,"linkquality":111,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:55:51: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":4,"illuminance_lux":4,"linkquality":114,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:57:10: MQTT publish: topic 'zigbee2mqtt/A006', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":60,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 21:57:21: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":4,"illuminance_lux":4,"linkquality":114,"occupancy":false,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:57:58: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":4,"illuminance_lux":4,"linkquality":111,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:57:58: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":4,"illuminance_lux":4,"linkquality":111,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:58:43: MQTT publish: topic 'zigbee2mqtt/I004', payload '{"battery":83,"device_temperature":27,"linkquality":63,"power_outage_count":25,"voltage":2975}'
+info  2023-04-05 21:59:28: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":4,"illuminance_lux":4,"linkquality":111,"occupancy":false,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 21:59:48: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.68,"current":0.27,"device_temperature":42,"energy":15.68,"linkquality":111,"power":63.09,"power_outage_count":44,"state":"ON","state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":233.97}'
+info  2023-04-05 21:59:54: MQTT publish: topic 'zigbee2mqtt/A007', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":63,"state":"OFF","update":{"state":"available"}}'
+info  2023-04-05 22:00:00: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":114,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 22:00:00: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":111,"occupancy":true,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 22:00:20: MQTT publish: topic 'zigbee2mqtt/I003', payload '{"action":"single","battery":100,"device_temperature":23,"linkquality":117,"power_outage_count":125,"voltage":3055}'
+error 2023-04-05 22:00:20: No converter available for 'relay' ("R002")
+error 2023-04-05 22:00:20: No converter available for 'relay' ("R002")
+info  2023-04-05 22:00:20: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.68,"current":0.27,"device_temperature":42,"energy":15.68,"linkquality":114,"power":63.09,"power_outage_count":44,"state":"ON","state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":233.97}'
+info  2023-04-05 22:00:20: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.68,"current":0.27,"device_temperature":42,"energy":15.68,"linkquality":114,"power":63.09,"power_outage_count":44,"state":"ON","state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":233.97}'
+info  2023-04-05 22:00:20: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.68,"current":0.27,"device_temperature":42,"energy":15.68,"linkquality":111,"power":63.09,"power_outage_count":44,"state":"ON","state_l1":"OFF","state_l2":"ON","update":{"state":"available"},"voltage":233.97}'
+info  2023-04-05 22:00:20: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.68,"current":0.27,"device_temperature":42,"energy":15.68,"linkquality":114,"power":63.09,"power_outage_count":44,"state":"ON","state_l1":"ON","state_l2":"ON","update":{"state":"available"},"voltage":233.97}'
+info  2023-04-05 22:00:29: MQTT publish: topic 'zigbee2mqtt/I003', payload '{"action":"single","battery":100,"device_temperature":23,"linkquality":114,"power_outage_count":125,"voltage":3055}'
+error 2023-04-05 22:00:29: No converter available for 'relay' ("R002")
+error 2023-04-05 22:00:29: No converter available for 'relay' ("R002")
+info  2023-04-05 22:00:29: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.68,"current":0.27,"device_temperature":42,"energy":15.68,"linkquality":114,"power":63.09,"power_outage_count":44,"state":"ON","state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":233.97}'
+info  2023-04-05 22:00:29: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.68,"current":0.27,"device_temperature":42,"energy":15.68,"linkquality":114,"power":63.09,"power_outage_count":44,"state":"ON","state_l1":"ON","state_l2":"OFF","update":{"state":"available"},"voltage":233.97}'
+info  2023-04-05 22:00:29: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.68,"current":0.27,"device_temperature":42,"energy":15.68,"linkquality":114,"power":63.09,"power_outage_count":44,"state":"ON","state_l1":"OFF","state_l2":"OFF","update":{"state":"available"},"voltage":233.97}'
+info  2023-04-05 22:00:29: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.68,"current":0.27,"device_temperature":42,"energy":15.68,"linkquality":114,"power":63.09,"power_outage_count":44,"state":"ON","state_l1":"OFF","state_l2":"OFF","update":{"state":"available"},"voltage":233.97}'
+info  2023-04-05 22:00:31: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.68,"current":0.27,"device_temperature":42,"energy":15.68,"linkquality":114,"power":3.77,"power_outage_count":44,"state":"ON","state_l1":"OFF","state_l2":"OFF","update":{"state":"available"},"voltage":233.97}'
+info  2023-04-05 22:00:33: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":15.68,"current":0.27,"device_temperature":42,"energy":15.68,"linkquality":111,"power":0.03,"power_outage_count":44,"state":"ON","state_l1":"OFF","state_l2":"OFF","update":{"state":"available"},"voltage":233.97}'
+info  2023-04-05 22:01:30: MQTT publish: topic 'zigbee2mqtt/P002', payload '{"battery":100,"device_temperature":24,"illuminance":6,"illuminance_lux":6,"linkquality":111,"occupancy":false,"power_outage_count":14,"voltage":3015}'
+info  2023-04-05 22:02:16: MQTT publish: topic 'zigbee2mqtt/A006', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":45,"state":"OFF","update":{"state":"available"}}'

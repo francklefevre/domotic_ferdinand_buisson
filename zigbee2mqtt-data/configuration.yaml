@@ -78,11 +78,11 @@ devices:
     friendly_name: A010
   '0x0017880102d22996':
     friendly_name: A011
-  '0xf0d1b800001f6cb3':
-    friendly_name: '0xf0d1b800001f6cb3'
   '0xa4c1389b82055bd6':
     friendly_name: R003
   '0x14b457fffe6c11f3':
     friendly_name: X002
   '0x040d84fffeac3a17':
     friendly_name: X003
+  '0x84ba20fffe28b03b':
+    friendly_name: T001

@@ -1841,7 +1841,7 @@
         "type": "debug",
         "z": "f03cfb04ffe21e70",
         "name": "debug 8",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1951,6 +1951,44 @@
         ],
         "x": 730,
         "y": 460,
+        "wires": []
+    },
+    {
+        "id": "d3fbbee1551c98ef",
+        "type": "mqtt in",
+        "z": "f03cfb04ffe21e70",
+        "name": "",
+        "topic": "zigbee2mqtt/T001",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 740,
+        "wires": [
+            [
+                "be6b6766cb81c3c1"
+            ]
+        ]
+    },
+    {
+        "id": "be6b6766cb81c3c1",
+        "type": "debug",
+        "z": "f03cfb04ffe21e70",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 740,
         "wires": []
     },
     {
@@ -2512,7 +2550,8 @@
                 "2302bcd015178ea2"
             ],
             [
-                "580569fb82cd947c"
+                "580569fb82cd947c",
+                "2302bcd015178ea2"
             ],
             [
                 "468140714999e2af",
@@ -2597,7 +2636,7 @@
         "type": "debug",
         "z": "469b4b2f6211fe88",
         "name": "debug 10",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3540,6 +3579,31 @@
         "wires": []
     },
     {
+        "id": "9b2693dd2bbf878f",
+        "type": "inject",
+        "z": "f478c30160855d4f",
+        "name": "",
+        "props": [
+            {
+                "p": "color",
+                "v": "#DD6900",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 210,
+        "y": 540,
+        "wires": [
+            [
+                "9c0decd82922d363"
+            ]
+        ]
+    },
+    {
         "id": "4963be5.b45044",
         "type": "mqtt in",
         "z": "2537c1c5.0f952e",
@@ -4383,10 +4447,11 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 944,
+        "x": 924,
         "y": 160,
         "wires": []
     },
@@ -4417,10 +4482,11 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 944,
+        "x": 924,
         "y": 220,
         "wires": []
     },
@@ -4469,15 +4535,74 @@
         "type": "debug",
         "z": "9e6027c8096e7614",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
+        "x": 930,
         "y": 100,
         "wires": []
+    },
+    {
+        "id": "55979668830dc38b",
+        "type": "inject",
+        "z": "9e6027c8096e7614",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 440,
+        "y": 240,
+        "wires": [
+            [
+                "82e09b4c13c8a849"
+            ]
+        ]
+    },
+    {
+        "id": "2cea0c36020111c5",
+        "type": "inject",
+        "z": "9e6027c8096e7614",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "98e2bc711c2ebe6d"
+            ]
+        ]
     }
 ]
