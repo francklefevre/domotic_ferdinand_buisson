@@ -63,6 +63,14 @@
         "env": []
     },
     {
+        "id": "e2267bfe72c3e79d",
+        "type": "tab",
+        "label": "Test",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "0181e1b26c9ae404",
         "type": "subflow",
         "name": "Set relais",
@@ -682,6 +690,94 @@
         "color": "#DDAA99"
     },
     {
+        "id": "de67962f4584028b",
+        "type": "subflow",
+        "name": "Thermostatique",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "cc3fde561dc968e8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 560,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "fb8b0b960f22635f",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99",
+        "status": {
+            "x": 320,
+            "y": 140,
+            "wires": [
+                {
+                    "id": "cc3fde561dc968e8",
+                    "port": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": "4db7628c7a8c0ec6",
+        "type": "group",
+        "z": "a8ecb6268d2f7168",
+        "name": "Bureau",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "4f2404fa034cc33e",
+            "f76d75b0b619d9e3",
+            "133b52072840c63a",
+            "129c994498727a2a",
+            "b7f3ca28a2665f2d"
+        ],
+        "env": [
+            {
+                "name": "PIECE",
+                "value": "Bureau",
+                "type": "str"
+            }
+        ],
+        "x": 34,
+        "y": 379
+    },
+    {
+        "id": "404fea4ede43d1dd",
+        "type": "group",
+        "z": "a8ecb6268d2f7168",
+        "name": "Parents",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6f7fcf3d3237b036",
+            "94e1925673e10846",
+            "75c23621b7cf3f82",
+            "71419739f6c965b5",
+            "c0cbaf35a3ff8041",
+            "9084d351d74cfb09",
+            "2d83fb21b49de743"
+        ],
+        "x": 34,
+        "y": 519
+    },
+    {
         "id": "43acfe3a9b9177ba",
         "type": "mqtt-broker",
         "name": "localhost",
@@ -1296,6 +1392,64 @@
         ]
     },
     {
+        "id": "cc3fde561dc968e8",
+        "type": "function",
+        "z": "de67962f4584028b",
+        "name": "Status",
+        "func": "\nvar newMsg = {} ;\nvar text = msg.payload.local_temperature + \"/\" + msg.payload.current_heating_setpoint ;\nvar shape = \"ring\" ;\nvar fill = \"green\" ;\n\nif(msg.payload.running_state == \"heat\")\n    {\n    text = text + \" (chauffe)\" ; \n    shape = \"dot\";\n    fill = \"red\";\n    }\nnewMsg.payload = ({ fill: fill, shape: shape, text: text });\nnode.send([null, newMsg]);\n\nreturn ([msg, null]);",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "fb8b0b960f22635f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "fb8b0b960f22635f",
+        "type": "function",
+        "z": "de67962f4584028b",
+        "name": "",
+        "func": "\nvar newMsg = {};\n\n\nif (msg.payload.local_temperature !== undefined)\n    { // To monitor the temperature\n    newMsg.topic = \"argentan/\" + msg.topic + \"/temperature\"\n    newMsg.payload = msg.payload.local_temperature;\n    node.send([null, newMsg]);\n}\nreturn([msg, null]);\n\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 60,
+        "wires": [
+            [],
+            [
+                "a860996b177a0d4f"
+            ]
+        ]
+    },
+    {
+        "id": "a860996b177a0d4f",
+        "type": "mqtt out",
+        "z": "de67962f4584028b",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "7be6658fa8d1bfc9",
+        "x": 550,
+        "y": 100,
+        "wires": []
+    },
+    {
         "id": "a2a20837e38d5673",
         "type": "mqtt out",
         "z": "10dd252317cb822a",
@@ -1318,7 +1472,7 @@
         "type": "function",
         "z": "10dd252317cb822a",
         "name": "Build watchdog",
-        "func": "/*\n- id : ID of the watchdog (mandatory) : must be unique. \n- delay (mandatory) : maximum delay in seconds between two calls to the concerned watchdog.\n- monitor (mandatory) : the +xxx phone number of the recipient of the alert through SMS.\n- message (mandatory) : message to send to the monitor when the delay is overpassed.\n*/\n\nvar watchdog = { id : \"FerdinandBUISSON_domotique\",\n            delay : 360 , // On recoit un status toutes le 5mn normalement.\n            monitor : \"+33661776135\",\n    message: \"Watchdog report : FerdinandBUISSON_domotique failed.\"\n            } ;\n\nmsg.payload = watchdog ;\nreturn msg;",
+        "func": "//\n\nvar watchdog = { id : \"FerdinandBUISSON_domotique\",\n            delay : 360 , // On recoit un status toutes le 5mn normalement.\n//            sms : \"+33661776135\",\n            telegram: \"167883368\",\n    message: \"Watchdog report : FerdinandBUISSON_domotique failed.\"\n            } ;\n\nmsg.payload = watchdog ;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2662,6 +2816,65 @@
         "wires": [
             [
                 "32212a390c7f2ff2"
+            ]
+        ]
+    },
+    {
+        "id": "10e319a4f02ab8f1",
+        "type": "inject",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 580,
+        "wires": [
+            [
+                "b670deefdf9cff67"
+            ]
+        ]
+    },
+    {
+        "id": "08416b7dc8ea2578",
+        "type": "inject",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 400,
+        "y": 60,
+        "wires": [
+            [
+                "4d4e95bf9f104a42",
+                "f4df2fd0f1a35a26"
             ]
         ]
     },
@@ -4593,7 +4806,7 @@
         "y": 80,
         "wires": [
             [
-                "cc3fde561dc968e8"
+                "97b1f53d4bab5860"
             ]
         ]
     },
@@ -4614,7 +4827,7 @@
         "y": 140,
         "wires": [
             [
-                "39f7f381a719e8ee"
+                "23f004d60ab78208"
             ]
         ]
     },
@@ -4870,7 +5083,7 @@
         "y": 200,
         "wires": [
             [
-                "1741352a7b0c6937"
+                "efa3a5b87cc19ac7"
             ]
         ]
     },
@@ -4891,7 +5104,7 @@
         "y": 260,
         "wires": [
             [
-                "04bcf3632f01318b"
+                "b308f5302f577db9"
             ]
         ]
     },
@@ -4912,26 +5125,7 @@
         "y": 320,
         "wires": [
             [
-                "dc5d52be72b5e16c"
-            ]
-        ]
-    },
-    {
-        "id": "cc3fde561dc968e8",
-        "type": "function",
-        "z": "a8ecb6268d2f7168",
-        "name": "Status",
-        "func": "var text = msg.payload.local_temperature + \"/\" + msg.payload.current_heating_setpoint ;\nvar shape = \"ring\" ;\nvar fill = \"green\" ;\n\nif(msg.payload.running_state == \"heat\")\n    {\n    text = text + \" (chauffe)\" ; \n    shape = \"dot\";\n    fill = \"red\";\n    }\nnode.status({ fill: fill, shape: shape, text: text });\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 570,
-        "y": 80,
-        "wires": [
-            [
-                "c1a61ebdcc7a9997"
+                "a09adc9be152f8a6"
             ]
         ]
     },
@@ -4940,7 +5134,7 @@
         "type": "debug",
         "z": "a8ecb6268d2f7168",
         "name": "debug 14",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4950,82 +5144,6 @@
         "x": 780,
         "y": 200,
         "wires": []
-    },
-    {
-        "id": "39f7f381a719e8ee",
-        "type": "function",
-        "z": "a8ecb6268d2f7168",
-        "name": "Status",
-        "func": "var text = msg.payload.local_temperature + \"/\" + msg.payload.current_heating_setpoint ;\nvar shape = \"ring\" ;\nvar fill = \"green\" ;\n\nif(msg.payload.running_state == \"heat\")\n    {\n    text = text + \" (chauffe)\" ; \n    shape = \"dot\";\n    fill = \"red\";\n    }\nnode.status({ fill: fill, shape: shape, text: text });\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 570,
-        "y": 140,
-        "wires": [
-            [
-                "c1a61ebdcc7a9997"
-            ]
-        ]
-    },
-    {
-        "id": "1741352a7b0c6937",
-        "type": "function",
-        "z": "a8ecb6268d2f7168",
-        "name": "Status",
-        "func": "var text = msg.payload.local_temperature + \"/\" + msg.payload.current_heating_setpoint ;\nvar shape = \"ring\" ;\nvar fill = \"green\" ;\n\nif(msg.payload.running_state == \"heat\")\n    {\n    text = text + \" (chauffe)\" ; \n    shape = \"dot\";\n    fill = \"red\";\n    }\nnode.status({ fill: fill, shape: shape, text: text });\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 570,
-        "y": 200,
-        "wires": [
-            [
-                "c1a61ebdcc7a9997"
-            ]
-        ]
-    },
-    {
-        "id": "04bcf3632f01318b",
-        "type": "function",
-        "z": "a8ecb6268d2f7168",
-        "name": "Status",
-        "func": "var text = msg.payload.local_temperature + \"/\" + msg.payload.current_heating_setpoint ;\nvar shape = \"ring\" ;\nvar fill = \"green\" ;\n\nif(msg.payload.running_state == \"heat\")\n    {\n    text = text + \" (chauffe)\" ; \n    shape = \"dot\";\n    fill = \"red\";\n    }\nnode.status({ fill: fill, shape: shape, text: text });\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 570,
-        "y": 260,
-        "wires": [
-            [
-                "c1a61ebdcc7a9997"
-            ]
-        ]
-    },
-    {
-        "id": "dc5d52be72b5e16c",
-        "type": "function",
-        "z": "a8ecb6268d2f7168",
-        "name": "Status",
-        "func": "var text = msg.payload.local_temperature + \"/\" + msg.payload.current_heating_setpoint ;\nvar shape = \"ring\" ;\nvar fill = \"green\" ;\n\nif(msg.payload.running_state == \"heat\")\n    {\n    text = text + \" (chauffe)\" ; \n    shape = \"dot\";\n    fill = \"red\";\n    }\nnode.status({ fill: fill, shape: shape, text: text });\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 570,
-        "y": 320,
-        "wires": [
-            [
-                "c1a61ebdcc7a9997"
-            ]
-        ]
     },
     {
         "id": "f435b885b47e63e2",
@@ -5081,6 +5199,7 @@
         "id": "4f2404fa034cc33e",
         "type": "inject",
         "z": "a8ecb6268d2f7168",
+        "g": "4db7628c7a8c0ec6",
         "name": "",
         "props": [
             {
@@ -5098,8 +5217,8 @@
         "topic": "",
         "payload": "21",
         "payloadType": "num",
-        "x": 250,
-        "y": 400,
+        "x": 270,
+        "y": 420,
         "wires": [
             [
                 "f76d75b0b619d9e3"
@@ -5110,6 +5229,7 @@
         "id": "f76d75b0b619d9e3",
         "type": "mqtt out",
         "z": "a8ecb6268d2f7168",
+        "g": "4db7628c7a8c0ec6",
         "name": "",
         "topic": "zigbee2mqtt/T001/set/current_heating_setpoint",
         "qos": "",
@@ -5120,14 +5240,15 @@
         "correl": "",
         "expiry": "",
         "broker": "43acfe3a9b9177ba",
-        "x": 620,
-        "y": 400,
+        "x": 640,
+        "y": 420,
         "wires": []
     },
     {
         "id": "133b52072840c63a",
         "type": "inject",
         "z": "a8ecb6268d2f7168",
+        "g": "4db7628c7a8c0ec6",
         "name": "",
         "props": [
             {
@@ -5145,8 +5266,8 @@
         "topic": "",
         "payload": "15",
         "payloadType": "num",
-        "x": 250,
-        "y": 440,
+        "x": 270,
+        "y": 460,
         "wires": [
             [
                 "f76d75b0b619d9e3"
@@ -5157,26 +5278,29 @@
         "id": "129c994498727a2a",
         "type": "comment",
         "z": "a8ecb6268d2f7168",
+        "g": "4db7628c7a8c0ec6",
         "name": "20:00",
         "info": "",
-        "x": 90,
-        "y": 400,
+        "x": 110,
+        "y": 420,
         "wires": []
     },
     {
         "id": "b7f3ca28a2665f2d",
         "type": "comment",
         "z": "a8ecb6268d2f7168",
+        "g": "4db7628c7a8c0ec6",
         "name": "01:00",
         "info": "",
-        "x": 90,
-        "y": 440,
+        "x": 110,
+        "y": 460,
         "wires": []
     },
     {
         "id": "6f7fcf3d3237b036",
         "type": "inject",
         "z": "a8ecb6268d2f7168",
+        "g": "404fea4ede43d1dd",
         "name": "",
         "props": [
             {
@@ -5194,7 +5318,7 @@
         "topic": "",
         "payload": "21",
         "payloadType": "num",
-        "x": 250,
+        "x": 270,
         "y": 560,
         "wires": [
             [
@@ -5206,6 +5330,7 @@
         "id": "94e1925673e10846",
         "type": "mqtt out",
         "z": "a8ecb6268d2f7168",
+        "g": "404fea4ede43d1dd",
         "name": "",
         "topic": "zigbee2mqtt/T003/set/current_heating_setpoint",
         "qos": "",
@@ -5216,7 +5341,7 @@
         "correl": "",
         "expiry": "",
         "broker": "43acfe3a9b9177ba",
-        "x": 620,
+        "x": 640,
         "y": 560,
         "wires": []
     },
@@ -5224,6 +5349,7 @@
         "id": "75c23621b7cf3f82",
         "type": "inject",
         "z": "a8ecb6268d2f7168",
+        "g": "404fea4ede43d1dd",
         "name": "",
         "props": [
             {
@@ -5241,7 +5367,7 @@
         "topic": "",
         "payload": "18",
         "payloadType": "num",
-        "x": 250,
+        "x": 270,
         "y": 600,
         "wires": [
             [
@@ -5253,9 +5379,10 @@
         "id": "71419739f6c965b5",
         "type": "comment",
         "z": "a8ecb6268d2f7168",
+        "g": "404fea4ede43d1dd",
         "name": "22:00",
         "info": "",
-        "x": 90,
+        "x": 110,
         "y": 560,
         "wires": []
     },
@@ -5263,9 +5390,10 @@
         "id": "c0cbaf35a3ff8041",
         "type": "comment",
         "z": "a8ecb6268d2f7168",
+        "g": "404fea4ede43d1dd",
         "name": "01:00",
         "info": "",
-        "x": 90,
+        "x": 110,
         "y": 600,
         "wires": []
     },
@@ -5273,6 +5401,7 @@
         "id": "9084d351d74cfb09",
         "type": "inject",
         "z": "a8ecb6268d2f7168",
+        "g": "404fea4ede43d1dd",
         "name": "",
         "props": [
             {
@@ -5290,7 +5419,7 @@
         "topic": "",
         "payload": "15",
         "payloadType": "num",
-        "x": 250,
+        "x": 270,
         "y": 640,
         "wires": [
             [
@@ -5302,10 +5431,76 @@
         "id": "2d83fb21b49de743",
         "type": "comment",
         "z": "a8ecb6268d2f7168",
+        "g": "404fea4ede43d1dd",
         "name": "08:00",
         "info": "",
-        "x": 90,
+        "x": 110,
         "y": 640,
         "wires": []
+    },
+    {
+        "id": "97b1f53d4bab5860",
+        "type": "subflow:de67962f4584028b",
+        "z": "a8ecb6268d2f7168",
+        "name": "",
+        "x": 560,
+        "y": 80,
+        "wires": [
+            [
+                "c1a61ebdcc7a9997"
+            ]
+        ]
+    },
+    {
+        "id": "23f004d60ab78208",
+        "type": "subflow:de67962f4584028b",
+        "z": "a8ecb6268d2f7168",
+        "name": "",
+        "x": 560,
+        "y": 140,
+        "wires": [
+            [
+                "c1a61ebdcc7a9997"
+            ]
+        ]
+    },
+    {
+        "id": "efa3a5b87cc19ac7",
+        "type": "subflow:de67962f4584028b",
+        "z": "a8ecb6268d2f7168",
+        "name": "",
+        "x": 560,
+        "y": 200,
+        "wires": [
+            [
+                "c1a61ebdcc7a9997"
+            ]
+        ]
+    },
+    {
+        "id": "b308f5302f577db9",
+        "type": "subflow:de67962f4584028b",
+        "z": "a8ecb6268d2f7168",
+        "name": "",
+        "x": 560,
+        "y": 260,
+        "wires": [
+            [
+                "c1a61ebdcc7a9997"
+            ]
+        ]
+    },
+    {
+        "id": "a09adc9be152f8a6",
+        "type": "subflow:de67962f4584028b",
+        "z": "a8ecb6268d2f7168",
+        "name": "",
+        "x": 560,
+        "y": 320,
+        "wires": [
+            [
+                "c1a61ebdcc7a9997"
+            ]
+        ]
     }
 ]
