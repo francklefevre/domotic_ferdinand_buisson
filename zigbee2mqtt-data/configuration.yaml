@@ -94,3 +94,5 @@ devices:
     friendly_name: T004
   '0x003c84fffe21fdbd':
     friendly_name: T005
+  '0x287681fffe51e031':
+    friendly_name: '0x287681fffe51e031'

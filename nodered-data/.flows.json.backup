@@ -778,6 +778,31 @@
         "y": 519
     },
     {
+        "id": "e8a19bba8d5a5303",
+        "type": "group",
+        "z": "a8ecb6268d2f7168",
+        "name": "Bureau",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b5e73886628085ac",
+            "a417cf32bbeb7fa7",
+            "0febcd0f5b1df4fd",
+            "41114b7575c6017d",
+            "5b44e57fada2b577"
+        ],
+        "env": [
+            {
+                "name": "PIECE",
+                "value": "Bureau",
+                "type": "str"
+            }
+        ],
+        "x": 34,
+        "y": 719
+    },
+    {
         "id": "43acfe3a9b9177ba",
         "type": "mqtt-broker",
         "name": "localhost",
@@ -1472,7 +1497,7 @@
         "type": "function",
         "z": "10dd252317cb822a",
         "name": "Build watchdog",
-        "func": "//\n\nvar watchdog = { id : \"FerdinandBUISSON_domotique\",\n            delay : 360 , // On recoit un status toutes le 5mn normalement.\n            sms : \"+33661776135\",\n            telegram: \"167883368\",\n    message: \"Watchdog report : FerdinandBUISSON_domotique failed.\"\n            } ;\n\nmsg.payload = watchdog ;\nreturn msg;",
+        "func": "//\n\nvar watchdog = { id : \"FerdinandBUISSON_domotique\",\n            delay : 360 , // On recoit un status toutes le 5mn normalement.\n//            sms : \"+33661776135\",\n            telegram: \"167883368\",\n    message: \"Watchdog report : FerdinandBUISSON_domotique failed.\"\n            } ;\n\nmsg.payload = watchdog ;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2121,7 +2146,7 @@
         "type": "subflow:968de947dcf2fcd8",
         "z": "469b4b2f6211fe88",
         "name": "",
-        "x": 320,
+        "x": 280,
         "y": 120,
         "wires": [
             [
@@ -2168,7 +2193,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 140,
+        "x": 100,
         "y": 120,
         "wires": [
             [
@@ -2879,6 +2904,68 @@
         ]
     },
     {
+        "id": "3fd157da3b1e5a59",
+        "type": "mqtt in",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "fbuisson/veranda/allon",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2c7b5a9da06df627",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 240,
+        "wires": [
+            [
+                "ffbd57e0453d4001",
+                "a27a3e278e06ac34",
+                "0320befc0567800c"
+            ]
+        ]
+    },
+    {
+        "id": "6ec3800f379b606f",
+        "type": "mqtt in",
+        "z": "469b4b2f6211fe88",
+        "name": "",
+        "topic": "fbuisson/veranda/alloff",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2c7b5a9da06df627",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "2e2a0e60c04e99b3",
+                "f3f0890b16062d39",
+                "0320befc0567800c"
+            ]
+        ]
+    },
+    {
+        "id": "0320befc0567800c",
+        "type": "debug",
+        "z": "469b4b2f6211fe88",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 300,
+        "wires": []
+    },
+    {
         "id": "cd0bf6d0cee2c30a",
         "type": "subflow:968de947dcf2fcd8",
         "z": "2f76b69f4fde1323",
@@ -3352,6 +3439,35 @@
         "wires": [
             [
                 "849d15d2184ae4aa"
+            ]
+        ]
+    },
+    {
+        "id": "88d6ef3801bf2c2a",
+        "type": "inject",
+        "z": "2f76b69f4fde1323",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 520,
+        "y": 240,
+        "wires": [
+            [
+                "eecd3822316eeabf"
             ]
         ]
     },
@@ -4790,6 +4906,35 @@
         ]
     },
     {
+        "id": "d6c343059672939e",
+        "type": "inject",
+        "z": "9e6027c8096e7614",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 400,
+        "y": 40,
+        "wires": [
+            [
+                "71d34ef1.1c242"
+            ]
+        ]
+    },
+    {
         "id": "d367646d3737e415",
         "type": "mqtt in",
         "z": "a8ecb6268d2f7168",
@@ -5502,5 +5647,106 @@
                 "c1a61ebdcc7a9997"
             ]
         ]
+    },
+    {
+        "id": "b5e73886628085ac",
+        "type": "inject",
+        "z": "a8ecb6268d2f7168",
+        "g": "e8a19bba8d5a5303",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 20 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "15",
+        "payloadType": "num",
+        "x": 270,
+        "y": 760,
+        "wires": [
+            [
+                "a417cf32bbeb7fa7"
+            ]
+        ]
+    },
+    {
+        "id": "a417cf32bbeb7fa7",
+        "type": "mqtt out",
+        "z": "a8ecb6268d2f7168",
+        "g": "e8a19bba8d5a5303",
+        "name": "",
+        "topic": "zigbee2mqtt/T004/set/current_heating_setpoint",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 640,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "0febcd0f5b1df4fd",
+        "type": "inject",
+        "z": "a8ecb6268d2f7168",
+        "g": "e8a19bba8d5a5303",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 01 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "15",
+        "payloadType": "num",
+        "x": 270,
+        "y": 800,
+        "wires": [
+            [
+                "a417cf32bbeb7fa7"
+            ]
+        ]
+    },
+    {
+        "id": "41114b7575c6017d",
+        "type": "comment",
+        "z": "a8ecb6268d2f7168",
+        "g": "e8a19bba8d5a5303",
+        "name": "20:00",
+        "info": "",
+        "x": 110,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "5b44e57fada2b577",
+        "type": "comment",
+        "z": "a8ecb6268d2f7168",
+        "g": "e8a19bba8d5a5303",
+        "name": "01:00",
+        "info": "",
+        "x": 110,
+        "y": 800,
+        "wires": []
     }
 ]
