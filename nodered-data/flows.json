@@ -3846,7 +3846,8 @@
                 "f2fe90453861bb2e"
             ],
             [
-                "41505b5ad4c532e0"
+                "ee0fa440f069be3d",
+                "f2fe90453861bb2e"
             ]
         ]
     },
@@ -3905,24 +3906,26 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 360,
+        "x": 880,
+        "y": 320,
         "wires": []
     },
     {
-        "id": "41505b5ad4c532e0",
-        "type": "debug",
+        "id": "ee0fa440f069be3d",
+        "type": "mqtt out",
         "z": "f478c30160855d4f",
-        "name": "debug 18",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 400,
+        "name": "",
+        "topic": "radio/stop",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "43acfe3a9b9177ba",
+        "x": 880,
+        "y": 360,
         "wires": []
     },
     {
@@ -4953,6 +4956,91 @@
         "wires": [
             [
                 "71d34ef1.1c242"
+            ]
+        ]
+    },
+    {
+        "id": "5ecc46d2ce02aaea",
+        "type": "sonos-universal",
+        "z": "9e6027c8096e7614",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.stop",
+        "state": "",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 710,
+        "y": 380,
+        "wires": [
+            [
+                "b8b92ad547f1df2c"
+            ]
+        ]
+    },
+    {
+        "id": "b8b92ad547f1df2c",
+        "type": "debug",
+        "z": "9e6027c8096e7614",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "92b989dcae62bdf8",
+        "type": "inject",
+        "z": "9e6027c8096e7614",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 480,
+        "y": 380,
+        "wires": [
+            [
+                "5ecc46d2ce02aaea"
+            ]
+        ]
+    },
+    {
+        "id": "96d35ccaf40ffa02",
+        "type": "mqtt in",
+        "z": "9e6027c8096e7614",
+        "name": "",
+        "topic": "radio/stop",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 480,
+        "y": 420,
+        "wires": [
+            [
+                "5ecc46d2ce02aaea"
             ]
         ]
     },
