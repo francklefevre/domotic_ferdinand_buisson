@@ -80,8 +80,6 @@ devices:
     friendly_name: A011
   '0xa4c1389b82055bd6':
     friendly_name: R003
-  '0x14b457fffe6c11f3':
-    friendly_name: X002
   '0x040d84fffeac3a17':
     friendly_name: X003
   '0x84ba20fffe28b03b':
@@ -95,4 +93,6 @@ devices:
   '0x003c84fffe21fdbd':
     friendly_name: T005
   '0x287681fffe51e031':
-    friendly_name: '0x287681fffe51e031'
+    friendly_name: X010
+  '0x14b457fffe6c11f3':
+    friendly_name: X002
