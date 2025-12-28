@@ -5838,8 +5838,8 @@
         "strings": true,
         "include_empty_strings": "",
         "include_null_values": "",
-        "x": 250,
-        "y": 960,
+        "x": 570,
+        "y": 640,
         "wires": [
             [
                 "837f1ea9eae4382b"
@@ -5850,14 +5850,12 @@
         "id": "4a0b801c510ba396",
         "type": "inject",
         "z": "e2267bfe72c3e79d",
-        "name": "",
+        "name": "19 deg",
         "props": [
             {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
+                "p": "payload.temperature",
+                "v": "19",
+                "vt": "num"
             }
         ],
         "repeat": "",
@@ -5865,9 +5863,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 180,
+        "x": 170,
         "y": 440,
         "wires": [
             [
@@ -5887,8 +5883,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 960,
+        "x": 900,
+        "y": 640,
         "wires": []
     },
     {
@@ -5984,18 +5980,19 @@
         "id": "837f1ea9eae4382b",
         "type": "file",
         "z": "e2267bfe72c3e79d",
-        "name": "Agenda",
-        "filename": "thermostat.agenda_file",
+        "name": "Hot",
+        "filename": "thermostat.hot_file",
         "filenameType": "msg",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 440,
-        "y": 960,
+        "x": 730,
+        "y": 640,
         "wires": [
             [
-                "97070fda636b8653"
+                "97070fda636b8653",
+                "0b8647b45aaa99c5"
             ]
         ]
     },
@@ -6109,7 +6106,7 @@
         "z": "e2267bfe72c3e79d",
         "name": "",
         "sep": ",",
-        "hdrin": true,
+        "hdrin": false,
         "hdrout": "none",
         "multi": "mult",
         "ret": "\\n",
@@ -6340,8 +6337,8 @@
         "type": "function",
         "z": "e2267bfe72c3e79d",
         "name": "function 9",
-        "func": "/*\n\nmsg.thermostat = {\n    agenda_file: \"/data/thermo_agenda.csv\",\n    hot_file: \"/data/thermo_hot.csv\",  // Ce fichier est celui qui enregistre l'inertie en phase de chauffe. A quelle vitesse ça chauffe ?\n    cold_file: \"/data/thermo_cold.csv\",  // Ce fichier est celui qui enregistre l'inertie en phase de non-chauffe. A quelle vitesse ça refroidit ?\n    unknown_value: 999,\n    session : {\n        last_in_temp : 999,\n        last_in_update: 0,\n        last_ex_temp: 3,\n        last_ex_update: new Date(),\n        last_heating_state : 999\n    }\n} ;\n\n*/\nvar thermostat = global.get(\"THERMOSTAT\");\nmsg.thermostat = thermostat;\n\n/*\nQuand on reçoit une nouvelle température :\n   1- On regarde si cela motive une nouvelle valeur d'inertie. Il faut pour cela que xxxxx\n   2- On regarde si il faut allumer ou éteindre le chauffage\n*/\nconst temperature = msg.payload.temperature ;\n// Crée un objet Date qui représente la date et l'heure actuelles\nconst maintenant = new Date();\nvar jourSemaine = maintenant.getDay();  // Numéro du jour (de la semaine)  0=dimanche\njourSemaine -= 1; // Rétablir 0 = lundi\nif (jourSemaine == -1) jourSemaine = 6;\nconst heure = maintenant.getHours();      // ex: 14 (pour 14h)\nconst minute = maintenant.getMinutes();   // ex: 37\n\n// Allumage éventuel du chauffage\n// Recherche de la température de consigne à l'heure actuelle\nconst consigne = msg.thermostat.agenda[jourSemaine][heure];\n\n// Recherche de la température de consigne par anticipation\n// ...TBD...\n\n// Prise en compte de la temp actuelle v/s consigne\nvar heating_state = 0 ;\nif(temperature < consigne)\n   {\n   heating_state = 1;\n   msg.etat = \"ON\";\n   }\nelse\n   {\n   heating_state = 0;\n   msg.etat = \"OFF\";\n   }\nif (msg.thermostat.session.last_heating_state != heating_state) // Changement d'état du chauffage\n   {\n   msg.payload = \"Mise du chauffage à \" + heating_state + \" car temp=\" + temperature + \" et consigne=\" + consigne ;\n   node.send([msg, null]);\n   msg.thermostat.session.last_heating_state = heating_state ;\n   }\n\nmsg.thermostat.session.last_in_temp   = temperature;\nmsg.thermostat.session.last_in_update = new Date();\n\nreturn([null, msg]);",
-        "outputs": 2,
+        "func": "/*\n\nmsg.thermostat = {\n    agenda_file: \"/data/thermo_agenda.csv\",\n    hot_file: \"/data/thermo_hot.csv\",  // Ce fichier est celui qui enregistre l'inertie en phase de chauffe. A quelle vitesse ça chauffe ?\n    cold_file: \"/data/thermo_cold.csv\",  // Ce fichier est celui qui enregistre l'inertie en phase de non-chauffe. A quelle vitesse ça refroidit ?\n    unknown_value: 999,\n    session : {\n        last_in_temp : 999,\n        last_in_update: 0,\n        last_ex_temp: 3,\n        last_ex_update: new Date(),\n        last_heating_state : 999\n    },\n    agenda,\n    hot,\n    cold\n} ;\n\n*/\nvar i=0 ;\nvar thermostat = global.get(\"THERMOSTAT\");\nmsg.thermostat = thermostat;\n\n\n/*\nQuand on reçoit une nouvelle température :\n   1- On regarde si cela motive une nouvelle valeur d'inertie. Il faut pour cela que xxxxx\n   2- On regarde si il faut allumer ou éteindre le chauffage\n*/\nconst temperature = msg.payload.temperature ;\n// Crée un objet Date qui représente la date et l'heure actuelles\nconst maintenant = new Date();\nvar jourSemaine = maintenant.getDay();  // Numéro du jour (de la semaine)  0=dimanche\njourSemaine -= 1; // Rétablir 0 = lundi\nif (jourSemaine == -1) jourSemaine = 6;\nconst heure = maintenant.getHours();      // ex: 14 (pour 14h)\nconst minute = maintenant.getMinutes();   // ex: 37\n\n// Recherche de la cellule à modifier\nvar tableau ;\nvar in_temp_idx=-1 ;\nvar ex_temp_att= \"\";\n\nif(msg.thermostat.session.last_heating_state ==1)\n   { // Ca chauffe\n   tableau = msg.thermostat.hot ;\n   }\nelse\n   { // Ca ne chauffe pas\n   tableau = msg.thermostat.cold;\n   }\n\n//Mise à jour des historiques\nif (msg.thermostat.session.last_in_temp != msg.thermostat.unknown_value)\n   {\n   if (temperature != msg.thermostat.session.last_in_temp)\n      { // La température a changé\n      if (temperature > msg.thermostat.session.last_in_temp)\n         { // La température a augmenté.\n         msg.payload = \"La température a augmenté de \" + msg.thermostat.session.last_in_temp + \" à \" + temperature + \" \";\n         if (msg.thermostat.session.last_heating_state == 1)\n            msg.payload += \"avec chauffage.\"\n         else\n            msg.payload += \"sans chauffage.\"\n         node.send([msg, null, null]) ;\n         }\n      else if(temperature < msg.thermostat.session.last_in_temp)\n         { // La température a baissé.\n         msg.payload = \"La température a baissé de \" + msg.thermostat.session.last_in_temp + \" à \" + temperature + \" \";\n         if (msg.thermostat.session.last_heating_state == 1)\n            msg.payload += \"avec chauffage.\"\n         else\n            msg.payload += \"sans chauffage.\"\n         node.send([msg, null, null]);\n         }\n      // Recherche temp int = index du tableau\n      for (i = 0; i < tableau.length; i++)\n         if (tableau[i].col1 == temperature)\n            in_temp_idx = i;\n//      node.warn(\"Ligne = \" + in_temp_idx);\n      // Recherche temp ext = nom de l'attribut dans l'objet\n      for (const [key, value] of Object.entries(tableau[0]))\n         if (value == msg.thermostat.session.last_ex_temp)\n            ex_temp_att = key; //\n      //\n      const now = new Date() ;\n      // @ts-ignore\n      const minutes = Math.floor((now - msg.thermostat.session.last_in_update) / 60000);\n      node.warn(\"Valeur à changer = \" + in_temp_idx + \" / \" + ex_temp_att + \" : \" + tableau[in_temp_idx][ex_temp_att] + \"->\" + minutes);\n      tableau[in_temp_idx][ex_temp_att] = minutes ;\n      node.send([null, null, msg]); // Ecriture des fichiers\n      //\n      msg.thermostat.session.last_in_temp = temperature;\n      msg.thermostat.session.last_in_update = now;\n      }\n   }\nelse\n   { // Première valeur de in_temp reçue\n   msg.thermostat.session.last_in_temp = temperature;\n   msg.thermostat.session.last_in_update = new Date();\n   }\n\n// Allumage éventuel du chauffage\n// Recherche de la température de consigne à l'heure actuelle\nconst consigne = msg.thermostat.agenda[jourSemaine][heure];\n\n// Recherche de la température de consigne par anticipation\n// ...TBD...\n\n// Prise en compte de la temp actuelle v/s consigne\nvar heating_state = 0 ;\nif(temperature < consigne)\n   {\n   heating_state = 1;\n   msg.etat = \"ON\";\n   }\nelse\n   {\n   heating_state = 0;\n   msg.etat = \"OFF\";\n   }\nif (msg.thermostat.session.last_heating_state != heating_state) // Changement d'état du chauffage\n   {\n   msg.payload = \"Mise du chauffage à \" + heating_state + \" car temp=\" + temperature + \" et consigne=\" + consigne ;\n   node.send([msg, null, null]);\n   }\n\nmsg.thermostat.session.last_heating_state = heating_state;\nreturn ([null, null, msg]);",
+        "outputs": 3,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -6355,6 +6352,9 @@
             [
                 "09bdd15322ac956b",
                 "f0bd66cc7f9ba35c"
+            ],
+            [
+                "18530b9ed84c03de"
             ]
         ]
     },
@@ -6364,7 +6364,7 @@
         "z": "e2267bfe72c3e79d",
         "name": "",
         "sep": ",",
-        "hdrin": true,
+        "hdrin": false,
         "hdrout": "none",
         "multi": "mult",
         "ret": "\\n",
@@ -6498,7 +6498,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
+        "x": 640,
         "y": 500,
         "wires": []
     },
@@ -6519,7 +6519,7 @@
                 "type": "str"
             }
         ],
-        "x": 570,
+        "x": 630,
         "y": 460,
         "wires": []
     },
@@ -6536,8 +6536,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 170,
-        "y": 580,
+        "x": 130,
+        "y": 800,
         "wires": [
             [
                 "2557f1050b091b8e"
@@ -6557,8 +6557,162 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 400,
-        "y": 580,
+        "x": 360,
+        "y": 800,
         "wires": []
+    },
+    {
+        "id": "18530b9ed84c03de",
+        "type": "function",
+        "z": "e2267bfe72c3e79d",
+        "name": "Sauve fichier Hot",
+        "func": "/*\n\nmsg.thermostat = {\n    agenda_file: \"/data/thermo_agenda.csv\",\n    hot_file: \"/data/thermo_hot.csv\",  // Ce fichier est celui qui enregistre l'inertie en phase de chauffe. A quelle vitesse ça chauffe ?\n    cold_file: \"/data/thermo_cold.csv\",  // Ce fichier est celui qui enregistre l'inertie en phase de non-chauffe. A quelle vitesse ça refroidit ?\n    unknown_value: 999,\n    session : {\n        last_in_temp : 999,\n        last_in_update: 0,\n        last_ex_temp: 3,\n        last_ex_update: new Date(),\n        last_heating_state : 999\n    }\n} ;\n*/\nmsg.thermostat = global.get(\"THERMOSTAT\");\nmsg.payload = msg.thermostat.hot;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 640,
+        "wires": [
+            [
+                "10275f1d6c3947c4"
+            ]
+        ]
+    },
+    {
+        "id": "2c360889d99d9d59",
+        "type": "inject",
+        "z": "e2267bfe72c3e79d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 640,
+        "wires": [
+            [
+                "18530b9ed84c03de"
+            ]
+        ]
+    },
+    {
+        "id": "390db7f7b6f97df9",
+        "type": "csv",
+        "z": "e2267bfe72c3e79d",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 570,
+        "y": 700,
+        "wires": [
+            [
+                "b020db10aec303f2"
+            ]
+        ]
+    },
+    {
+        "id": "1abe4c18049d4de4",
+        "type": "debug",
+        "z": "e2267bfe72c3e79d",
+        "name": "debug 30",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "b020db10aec303f2",
+        "type": "file",
+        "z": "e2267bfe72c3e79d",
+        "name": "Cold",
+        "filename": "thermostat.cold_file",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 730,
+        "y": 700,
+        "wires": [
+            [
+                "1abe4c18049d4de4"
+            ]
+        ]
+    },
+    {
+        "id": "0b8647b45aaa99c5",
+        "type": "function",
+        "z": "e2267bfe72c3e79d",
+        "name": "Sauve fichier Cold",
+        "func": "/*\n\nmsg.thermostat = {\n    agenda_file: \"/data/thermo_agenda.csv\",\n    hot_file: \"/data/thermo_hot.csv\",  // Ce fichier est celui qui enregistre l'inertie en phase de chauffe. A quelle vitesse ça chauffe ?\n    cold_file: \"/data/thermo_cold.csv\",  // Ce fichier est celui qui enregistre l'inertie en phase de non-chauffe. A quelle vitesse ça refroidit ?\n    unknown_value: 999,\n    session : {\n        last_in_temp : 999,\n        last_in_update: 0,\n        last_ex_temp: 3,\n        last_ex_update: new Date(),\n        last_heating_state : 999\n    }\n} ;\n*/\nmsg.thermostat = global.get(\"THERMOSTAT\");\nmsg.payload = msg.thermostat.cold;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 700,
+        "wires": [
+            [
+                "390db7f7b6f97df9"
+            ]
+        ]
+    },
+    {
+        "id": "4160cdf04cd6e496",
+        "type": "inject",
+        "z": "e2267bfe72c3e79d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 700,
+        "wires": [
+            [
+                "0b8647b45aaa99c5"
+            ]
+        ]
     }
 ]
