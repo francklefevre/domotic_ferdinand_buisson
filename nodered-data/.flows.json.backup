@@ -65,7 +65,7 @@
     {
         "id": "e2267bfe72c3e79d",
         "type": "tab",
-        "label": "Test",
+        "label": "Thermostat",
         "disabled": false,
         "info": "",
         "env": []
@@ -755,9 +755,7 @@
             }
         ],
         "x": 34,
-        "y": 379,
-        "w": 812,
-        "h": 122
+        "y": 379
     },
     {
         "id": "404fea4ede43d1dd",
@@ -777,9 +775,7 @@
             "2d83fb21b49de743"
         ],
         "x": 34,
-        "y": 519,
-        "w": 812,
-        "h": 162
+        "y": 519
     },
     {
         "id": "e8a19bba8d5a5303",
@@ -804,9 +800,7 @@
             }
         ],
         "x": 34,
-        "y": 719,
-        "w": 812,
-        "h": 122
+        "y": 719
     },
     {
         "id": "43acfe3a9b9177ba",
@@ -929,7 +923,7 @@
         "type": "function",
         "z": "0181e1b26c9ae404",
         "name": "",
-        "func": "var newstate = msg.payload ;\n\nif (msg.relais == undefined)\n    msg.relais = env.get(\"relais\");\nif (msg.canal == undefined)\n    msg.canal = env.get(\"canal\");\nif (msg.etat == undefined)\n    msg.etat = env.get(\"etat\");\n\nmsg.payload = {} ;\nmsg.payload.relay = msg.relais ;\nif (msg.canal != undefined)\n    msg.payload[\"state_l\" + msg.canal] = msg.etat;\nelse\n    msg.payload[\"state\"] = msg.etat;\nmsg.topic = \"zigbee2mqtt/\" + msg.relais + \"/set\";\nreturn msg;\n",
+        "func": "var newstate = msg.payload ;\n\nif (msg.relais == undefined)\n    msg.relais = env.get(\"relais\");\nif (msg.canal == undefined)\n    msg.canal = env.get(\"canal\");\nif (msg.etat == undefined)\n    msg.etat = env.get(\"etat\");\n\nmsg.payload = {} ;\nmsg.payload.relay = msg.relais ;\nif (msg.canal != undefined && msg.canal != \"\")\n    msg.payload[\"state_l\" + msg.canal] = msg.etat;\nelse\n    msg.payload[\"state\"] = msg.etat;\n\nmsg.topic = \"zigbee2mqtt/\" + msg.relais + \"/set\";\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -959,6 +953,23 @@
         "broker": "43acfe3a9b9177ba",
         "x": 390,
         "y": 80,
+        "wires": []
+    },
+    {
+        "id": "862b0b9762100ad2",
+        "type": "debug",
+        "z": "0181e1b26c9ae404",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 180,
         "wires": []
     },
     {
@@ -1997,7 +2008,7 @@
         "type": "debug",
         "z": "f03cfb04ffe21e70",
         "name": "debug 8",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2007,106 +2018,6 @@
         "statusType": "auto",
         "x": 480,
         "y": 640,
-        "wires": []
-    },
-    {
-        "id": "084f49749e87538b",
-        "type": "inject",
-        "z": "f03cfb04ffe21e70",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 540,
-        "y": 420,
-        "wires": [
-            [
-                "f0bd66cc7f9ba35c"
-            ]
-        ]
-    },
-    {
-        "id": "f0bd66cc7f9ba35c",
-        "type": "subflow:0181e1b26c9ae404",
-        "z": "f03cfb04ffe21e70",
-        "name": "R003",
-        "env": [
-            {
-                "name": "relais",
-                "value": "R003",
-                "type": "str"
-            },
-            {
-                "name": "etat",
-                "value": "ON",
-                "type": "str"
-            }
-        ],
-        "x": 730,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "a294d608db0d42c6",
-        "type": "inject",
-        "z": "f03cfb04ffe21e70",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 540,
-        "y": 460,
-        "wires": [
-            [
-                "a261170a53256b28"
-            ]
-        ]
-    },
-    {
-        "id": "a261170a53256b28",
-        "type": "subflow:0181e1b26c9ae404",
-        "z": "f03cfb04ffe21e70",
-        "name": "R003",
-        "env": [
-            {
-                "name": "relais",
-                "value": "R003",
-                "type": "str"
-            },
-            {
-                "name": "etat",
-                "value": "OFF",
-                "type": "str"
-            }
-        ],
-        "x": 730,
-        "y": 460,
         "wires": []
     },
     {
@@ -2982,62 +2893,6 @@
                 "0279fe2521e8a12b"
             ]
         ]
-    },
-    {
-        "id": "b8583d1aa54a3f4e",
-        "type": "mqtt in",
-        "z": "469b4b2f6211fe88",
-        "name": "",
-        "topic": "zigbee2mqtt/X010",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "43acfe3a9b9177ba",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 450,
-        "y": 1060,
-        "wires": [
-            [
-                "69fe85b583e8ad3b",
-                "da5fb57e3a1084de"
-            ]
-        ]
-    },
-    {
-        "id": "69fe85b583e8ad3b",
-        "type": "debug",
-        "z": "469b4b2f6211fe88",
-        "name": "debug 19",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 660,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "da5fb57e3a1084de",
-        "type": "mqtt out",
-        "z": "469b4b2f6211fe88",
-        "name": "",
-        "topic": "franck/cause",
-        "qos": "2",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "2c7b5a9da06df627",
-        "x": 670,
-        "y": 1100,
-        "wires": []
     },
     {
         "id": "cd0bf6d0cee2c30a",
@@ -5966,6 +5821,744 @@
         "info": "",
         "x": 110,
         "y": 800,
+        "wires": []
+    },
+    {
+        "id": "10275f1d6c3947c4",
+        "type": "csv",
+        "z": "e2267bfe72c3e79d",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 250,
+        "y": 960,
+        "wires": [
+            [
+                "837f1ea9eae4382b"
+            ]
+        ]
+    },
+    {
+        "id": "4a0b801c510ba396",
+        "type": "inject",
+        "z": "e2267bfe72c3e79d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 440,
+        "wires": [
+            [
+                "91d814ce69cc5315"
+            ]
+        ]
+    },
+    {
+        "id": "97070fda636b8653",
+        "type": "debug",
+        "z": "e2267bfe72c3e79d",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "e6c8f18d56b2864f",
+        "type": "csv",
+        "z": "e2267bfe72c3e79d",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "none",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 710,
+        "y": 160,
+        "wires": [
+            [
+                "4a44696c6eb39929"
+            ]
+        ]
+    },
+    {
+        "id": "9bc014838d796a4f",
+        "type": "inject",
+        "z": "e2267bfe72c3e79d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "40e2990364bc5b3c"
+            ]
+        ]
+    },
+    {
+        "id": "4a44696c6eb39929",
+        "type": "function",
+        "z": "e2267bfe72c3e79d",
+        "name": "function 4",
+        "func": "msg.thermostat.agenda = msg.payload ;\nglobal.set(\"THERMOSTAT\", msg.thermostat);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 160,
+        "wires": [
+            [
+                "76fad196442507b2",
+                "bf5ea98da89d4d68"
+            ]
+        ]
+    },
+    {
+        "id": "76fad196442507b2",
+        "type": "debug",
+        "z": "e2267bfe72c3e79d",
+        "name": "debug 22",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "837f1ea9eae4382b",
+        "type": "file",
+        "z": "e2267bfe72c3e79d",
+        "name": "Agenda",
+        "filename": "thermostat.agenda_file",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 440,
+        "y": 960,
+        "wires": [
+            [
+                "97070fda636b8653"
+            ]
+        ]
+    },
+    {
+        "id": "f5680a45be8380e5",
+        "type": "file in",
+        "z": "e2267bfe72c3e79d",
+        "name": "Agenda",
+        "filename": "thermostat.agenda_file",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 540,
+        "y": 160,
+        "wires": [
+            [
+                "e6c8f18d56b2864f"
+            ]
+        ]
+    },
+    {
+        "id": "981dc542ac3f905c",
+        "type": "inject",
+        "z": "e2267bfe72c3e79d",
+        "name": "Globals",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "3b5d72ad7fa1b2b1"
+            ]
+        ]
+    },
+    {
+        "id": "3b5d72ad7fa1b2b1",
+        "type": "function",
+        "z": "e2267bfe72c3e79d",
+        "name": "function 5",
+        "func": "msg.thermostat = {\n    agenda_file: \"/data/thermo_agenda.csv\",\n    hot_file: \"/data/thermo_hot.csv\",  // Ce fichier est celui qui enregistre l'inertie en phase de chauffe. A quelle vitesse ça chauffe ?\n    cold_file: \"/data/thermo_cold.csv\",  // Ce fichier est celui qui enregistre l'inertie en phase de non-chauffe. A quelle vitesse ça refroidit ?\n    unknown_value: 999,\n    session : {\n        last_in_temp : 999,\n        last_in_update: 0,\n        last_ex_temp: 3,\n        last_ex_update: new Date(),\n        last_heating_state : 999\n    }\n} ;\nglobal.set(\"THERMOSTAT\", msg.thermostat);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 80,
+        "wires": [
+            [
+                "9b64fbb4cba85368",
+                "f5680a45be8380e5"
+            ]
+        ]
+    },
+    {
+        "id": "40e2990364bc5b3c",
+        "type": "function",
+        "z": "e2267bfe72c3e79d",
+        "name": "function 6",
+        "func": "var thermostat = global.get(\"THERMOSTAT\") ;\nmsg.thermostat = thermostat ;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "f5680a45be8380e5"
+            ]
+        ]
+    },
+    {
+        "id": "9b64fbb4cba85368",
+        "type": "debug",
+        "z": "e2267bfe72c3e79d",
+        "name": "debug 23",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "cd9bb41e87aa2a34",
+        "type": "csv",
+        "z": "e2267bfe72c3e79d",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "none",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 710,
+        "y": 220,
+        "wires": [
+            [
+                "ba5d344064e76a3c"
+            ]
+        ]
+    },
+    {
+        "id": "776c1c2d71c9f2d9",
+        "type": "inject",
+        "z": "e2267bfe72c3e79d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 220,
+        "wires": [
+            [
+                "a15e5584da0a76c1"
+            ]
+        ]
+    },
+    {
+        "id": "ba5d344064e76a3c",
+        "type": "function",
+        "z": "e2267bfe72c3e79d",
+        "name": "function 7",
+        "func": "msg.thermostat.hot = msg.payload;\nglobal.set(\"THERMOSTAT\", msg.thermostat);\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 220,
+        "wires": [
+            [
+                "a853cbd3c840c684",
+                "c02c15a4d8791ebc"
+            ]
+        ]
+    },
+    {
+        "id": "a853cbd3c840c684",
+        "type": "debug",
+        "z": "e2267bfe72c3e79d",
+        "name": "debug 24",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "bf5ea98da89d4d68",
+        "type": "file in",
+        "z": "e2267bfe72c3e79d",
+        "name": "Hot",
+        "filename": "thermostat.hot_file",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 530,
+        "y": 220,
+        "wires": [
+            [
+                "cd9bb41e87aa2a34"
+            ]
+        ]
+    },
+    {
+        "id": "a15e5584da0a76c1",
+        "type": "function",
+        "z": "e2267bfe72c3e79d",
+        "name": "function 8",
+        "func": "var thermostat = global.get(\"THERMOSTAT\") ;\nmsg.thermostat = thermostat ;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [
+                "bf5ea98da89d4d68"
+            ]
+        ]
+    },
+    {
+        "id": "b8583d1aa54a3f4e",
+        "type": "mqtt in",
+        "z": "e2267bfe72c3e79d",
+        "name": "",
+        "topic": "zigbee2mqtt/X010",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "91d814ce69cc5315"
+            ]
+        ]
+    },
+    {
+        "id": "da5fb57e3a1084de",
+        "type": "mqtt out",
+        "z": "e2267bfe72c3e79d",
+        "name": "",
+        "topic": "franck/cause",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2c7b5a9da06df627",
+        "x": 590,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "98847a84ca6936c8",
+        "type": "debug",
+        "z": "e2267bfe72c3e79d",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "thermostat",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "0daede1820160340",
+        "type": "inject",
+        "z": "e2267bfe72c3e79d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 340,
+        "wires": [
+            [
+                "b87ac6e7eb8c44d8"
+            ]
+        ]
+    },
+    {
+        "id": "b87ac6e7eb8c44d8",
+        "type": "function",
+        "z": "e2267bfe72c3e79d",
+        "name": "Show thermostat",
+        "func": "var thermostat = global.get(\"THERMOSTAT\") ;\nmsg.thermostat = thermostat ;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 340,
+        "wires": [
+            [
+                "98847a84ca6936c8"
+            ]
+        ]
+    },
+    {
+        "id": "91d814ce69cc5315",
+        "type": "function",
+        "z": "e2267bfe72c3e79d",
+        "name": "function 9",
+        "func": "/*\n\nmsg.thermostat = {\n    agenda_file: \"/data/thermo_agenda.csv\",\n    hot_file: \"/data/thermo_hot.csv\",  // Ce fichier est celui qui enregistre l'inertie en phase de chauffe. A quelle vitesse ça chauffe ?\n    cold_file: \"/data/thermo_cold.csv\",  // Ce fichier est celui qui enregistre l'inertie en phase de non-chauffe. A quelle vitesse ça refroidit ?\n    unknown_value: 999,\n    session : {\n        last_in_temp : 999,\n        last_in_update: 0,\n        last_ex_temp: 3,\n        last_ex_update: new Date(),\n        last_heating_state : 999\n    }\n} ;\n\n*/\nvar thermostat = global.get(\"THERMOSTAT\");\nmsg.thermostat = thermostat;\n\n/*\nQuand on reçoit une nouvelle température :\n   1- On regarde si cela motive une nouvelle valeur d'inertie. Il faut pour cela que xxxxx\n   2- On regarde si il faut allumer ou éteindre le chauffage\n*/\nconst temperature = msg.payload.temperature ;\n// Crée un objet Date qui représente la date et l'heure actuelles\nconst maintenant = new Date();\nvar jourSemaine = maintenant.getDay();  // Numéro du jour (de la semaine)  0=dimanche\njourSemaine -= 1; // Rétablir 0 = lundi\nif (jourSemaine == -1) jourSemaine = 6;\nconst heure = maintenant.getHours();      // ex: 14 (pour 14h)\nconst minute = maintenant.getMinutes();   // ex: 37\n\n// Allumage éventuel du chauffage\n// Recherche de la température de consigne à l'heure actuelle\nconst consigne = msg.thermostat.agenda[jourSemaine][heure];\n\n// Recherche de la température de consigne par anticipation\n// ...TBD...\n\n// Prise en compte de la temp actuelle v/s consigne\nvar heating_state = 0 ;\nif(temperature < consigne)\n   {\n   heating_state = 1;\n   msg.etat = \"ON\";\n   }\nelse\n   {\n   heating_state = 0;\n   msg.etat = \"OFF\";\n   }\nif (msg.thermostat.session.last_heating_state != heating_state) // Changement d'état du chauffage\n   {\n   msg.payload = \"Mise du chauffage à \" + heating_state + \" car temp=\" + temperature + \" et consigne=\" + consigne ;\n   node.send([msg, null]);\n   msg.thermostat.session.last_heating_state = heating_state ;\n   }\n\nmsg.thermostat.session.last_in_temp   = temperature;\nmsg.thermostat.session.last_in_update = new Date();\n\nreturn([null, msg]);",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 440,
+        "wires": [
+            [
+                "da5fb57e3a1084de"
+            ],
+            [
+                "09bdd15322ac956b",
+                "f0bd66cc7f9ba35c"
+            ]
+        ]
+    },
+    {
+        "id": "1a914e6eee87649a",
+        "type": "csv",
+        "z": "e2267bfe72c3e79d",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "none",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 710,
+        "y": 280,
+        "wires": [
+            [
+                "3058615f78b0b478"
+            ]
+        ]
+    },
+    {
+        "id": "1282ab8e7669a8cb",
+        "type": "inject",
+        "z": "e2267bfe72c3e79d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 280,
+        "wires": [
+            [
+                "ef17f305c57d6a9c"
+            ]
+        ]
+    },
+    {
+        "id": "3058615f78b0b478",
+        "type": "function",
+        "z": "e2267bfe72c3e79d",
+        "name": "function 10",
+        "func": "msg.thermostat.cold = msg.payload;\nglobal.set(\"THERMOSTAT\", msg.thermostat);\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 280,
+        "wires": [
+            [
+                "892bf3e8fd399063"
+            ]
+        ]
+    },
+    {
+        "id": "892bf3e8fd399063",
+        "type": "debug",
+        "z": "e2267bfe72c3e79d",
+        "name": "debug 26",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "c02c15a4d8791ebc",
+        "type": "file in",
+        "z": "e2267bfe72c3e79d",
+        "name": "Cold",
+        "filename": "thermostat.cold_file",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 530,
+        "y": 280,
+        "wires": [
+            [
+                "1a914e6eee87649a"
+            ]
+        ]
+    },
+    {
+        "id": "ef17f305c57d6a9c",
+        "type": "function",
+        "z": "e2267bfe72c3e79d",
+        "name": "function 11",
+        "func": "var thermostat = global.get(\"THERMOSTAT\") ;\nmsg.thermostat = thermostat ;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "c02c15a4d8791ebc"
+            ]
+        ]
+    },
+    {
+        "id": "09bdd15322ac956b",
+        "type": "debug",
+        "z": "e2267bfe72c3e79d",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "f0bd66cc7f9ba35c",
+        "type": "subflow:0181e1b26c9ae404",
+        "z": "e2267bfe72c3e79d",
+        "name": "R003",
+        "env": [
+            {
+                "name": "relais",
+                "value": "R003",
+                "type": "str"
+            },
+            {
+                "name": "etat",
+                "value": "ON",
+                "type": "str"
+            }
+        ],
+        "x": 570,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "fd1681bb9ecaac66",
+        "type": "mqtt in",
+        "z": "e2267bfe72c3e79d",
+        "name": "",
+        "topic": "zigbee2mqtt/R003",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "43acfe3a9b9177ba",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 580,
+        "wires": [
+            [
+                "2557f1050b091b8e"
+            ]
+        ]
+    },
+    {
+        "id": "2557f1050b091b8e",
+        "type": "debug",
+        "z": "e2267bfe72c3e79d",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 580,
         "wires": []
     }
 ]
