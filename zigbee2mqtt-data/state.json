@@ -15,7 +15,7 @@
         "temperature": 19,
         "pm25": 3,
         "humidity": 51,
-        "voc_index": 122,
+        "voc_index": 90,
         "linkquality": 66,
         "update": {
             "state": "idle",
@@ -70,8 +70,8 @@
         "switch_type": "toggle"
     },
     "0x00158d00046516c8": {
-        "voltage": 2975,
-        "battery": 83,
+        "voltage": 2985,
+        "battery": 90,
         "device_temperature": 28,
         "power_outage_count": 25,
         "linkquality": 54
@@ -90,7 +90,7 @@
         "power_outage_count": 65,
         "energy": 0.8,
         "consumption": 0.7950000166893005,
-        "voltage": 226.03,
+        "voltage": 228.44,
         "current": 0,
         "power": 0,
         "linkquality": 51,
