@@ -1,0 +1,100 @@
+permit_join: true
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://mqtt
+serial:
+  port: /dev/ttyUSB0
+frontend:
+  port: 8080
+advanced:
+  network_key:
+    - 211
+    - 158
+    - 146
+    - 246
+    - 115
+    - 87
+    - 115
+    - 237
+    - 246
+    - 205
+    - 189
+    - 42
+    - 207
+    - 202
+    - 16
+    - 196
+  homeassistant_legacy_entity_attributes: false
+  legacy_api: false
+  legacy_availability_payload: false
+device_options:
+  legacy: false
+devices:
+  '0x00158d00058a83de':
+    friendly_name: P001
+  '0x00158d00058e1586':
+    friendly_name: R001
+  '0x00158d00053039d3':
+    friendly_name: A001
+  '0x00158d000520ad81':
+    friendly_name: A002
+  '0x00158d000456c6aa':
+    friendly_name: I001
+  '0x00158d00045500bb':
+    friendly_name: I002
+  '0x00158d00058e159d':
+    friendly_name: R002
+  '0x00158d000464fbc6':
+    friendly_name: I003
+  '0x00158d0005827863':
+    friendly_name: P002
+  '0x000d6ffffe0538f7':
+    friendly_name: A003
+  '0x000d6ffffe0e6cfb':
+    friendly_name: X001
+  '0x000d6ffffe055141':
+    friendly_name: A004
+  '0x000d6ffffe0e8e2c':
+    friendly_name: A005
+  '0x00158d00046516c8':
+    friendly_name: I004
+  '0x00158d000520ef8d':
+    friendly_name: A006
+  '0x00158d0005730fc6':
+    friendly_name: A007
+  '0x00158d0003facd3d':
+    friendly_name: I005
+  '0x00158d000520f1b2':
+    friendly_name: A008
+  '0x00158d00054b89f1':
+    friendly_name: C001
+  '0x003c84fffec3e3da':
+    friendly_name: L001
+  '0xcc86ecfffe1e71e3':
+    friendly_name: A009
+  '0x2c1165fffe8405f6':
+    friendly_name: P003
+  '0x2c1165fffec74eff':
+    friendly_name: A010
+  '0x0017880102d22996':
+    friendly_name: A011
+  '0xa4c1389b82055bd6':
+    friendly_name: R003
+  '0x040d84fffeac3a17':
+    friendly_name: X003
+  '0x84ba20fffe28b03b':
+    friendly_name: T001
+  '0x9035eafffe747dfa':
+    friendly_name: T002
+  '0x003c84fffe21fa74':
+    friendly_name: T003
+  '0x9035eafffe7124d5':
+    friendly_name: T004
+  '0x003c84fffe21fdbd':
+    friendly_name: T005
+  '0x287681fffe51e031':
+    friendly_name: X010
+  '0x14b457fffe6c11f3':
+    friendly_name: X002
+  '0x1020bafffefa3d44':
+    friendly_name: R004

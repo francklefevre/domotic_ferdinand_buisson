@@ -1,0 +1,113 @@
+info  2025-12-26 19:17:49: Logging to console and directory: '/app/data/log/2025-12-26.19-17-49' filename: log.txt
+info  2025-12-26 19:17:49: Starting Zigbee2MQTT version 1.30.3 (commit #24c6b2e)
+info  2025-12-26 19:17:49: Starting zigbee-herdsman (0.14.103)
+info  2025-12-26 19:17:54: zigbee-herdsman started (resumed)
+info  2025-12-26 19:17:54: Coordinator firmware version: '{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20210708,"transportrev":2},"type":"zStack3x0"}'
+info  2025-12-26 19:17:54: Currently 32 devices are joined:
+info  2025-12-26 19:17:54: P001 (0x00158d00058a83de): RTCGQ11LM - Xiaomi Aqara human body movement and illuminance sensor (EndDevice)
+info  2025-12-26 19:17:54: R001 (0x00158d00058e1586): LLKZMK11LM - Xiaomi Aqara wireless relay controller (Router)
+info  2025-12-26 19:17:54: A001 (0x00158d00053039d3): ZNLDP12LM - Xiaomi Aqara smart LED bulb (Router)
+info  2025-12-26 19:17:54: A002 (0x00158d000520ad81): ZNLDP12LM - Xiaomi Aqara smart LED bulb (Router)
+info  2025-12-26 19:17:54: I001 (0x00158d000456c6aa): WXKG03LM_rev2 - Xiaomi Aqara single key wireless wall switch (2018 model) (EndDevice)
+info  2025-12-26 19:17:54: I002 (0x00158d00045500bb): WXKG03LM_rev2 - Xiaomi Aqara single key wireless wall switch (2018 model) (EndDevice)
+info  2025-12-26 19:17:54: R002 (0x00158d00058e159d): LLKZMK11LM - Xiaomi Aqara wireless relay controller (Router)
+info  2025-12-26 19:17:54: I003 (0x00158d000464fbc6): WXKG03LM_rev2 - Xiaomi Aqara single key wireless wall switch (2018 model) (EndDevice)
+info  2025-12-26 19:17:54: P002 (0x00158d0005827863): RTCGQ11LM - Xiaomi Aqara human body movement and illuminance sensor (EndDevice)
+info  2025-12-26 19:17:54: A003 (0x000d6ffffe0538f7): LED1624G9 - IKEA TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white (Router)
+info  2025-12-26 19:17:54: X001 (0x000d6ffffe0e6cfb): E1524/E1810 - IKEA TRADFRI remote control (EndDevice)
+info  2025-12-26 19:17:54: A004 (0x000d6ffffe055141): LED1624G9 - IKEA TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white (Router)
+info  2025-12-26 19:17:54: A005 (0x000d6ffffe0e8e2c): LED1624G9 - IKEA TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white (Router)
+info  2025-12-26 19:17:54: I004 (0x00158d00046516c8): WXKG03LM_rev2 - Xiaomi Aqara single key wireless wall switch (2018 model) (EndDevice)
+info  2025-12-26 19:17:54: A006 (0x00158d000520ef8d): ZNLDP12LM - Xiaomi Aqara smart LED bulb (Router)
+info  2025-12-26 19:17:54: A007 (0x00158d0005730fc6): ZNLDP12LM - Xiaomi Aqara smart LED bulb (Router)
+info  2025-12-26 19:17:54: I005 (0x00158d0003facd3d): WXKG03LM_rev2 - Xiaomi Aqara single key wireless wall switch (2018 model) (EndDevice)
+info  2025-12-26 19:17:54: A008 (0x00158d000520f1b2): ZNLDP12LM - Xiaomi Aqara smart LED bulb (Router)
+info  2025-12-26 19:17:54: C001 (0x00158d00054b89f1): MFKZQ01LM - Xiaomi Mi/Aqara smart home cube (EndDevice)
+info  2025-12-26 19:17:54: L001 (0x003c84fffec3e3da): HG06104A - Lidl Livarno Lux smart LED light strip 2.5m (Router)
+info  2025-12-26 19:17:54: P003 (0x2c1165fffe8405f6): HG06335/HG07310 - Lidl Silvercrest smart motion sensor (EndDevice)
+info  2025-12-26 19:17:54: A010 (0x2c1165fffec74eff): HG07834B - Lidl Livarno Lux E14 candle RGB (Router)
+info  2025-12-26 19:17:54: A011 (0x0017880102d22996): 8718696449691 - Philips Hue White A60 Single bulb E27/B22 (Router)
+info  2025-12-26 19:17:54: T001 (0x84ba20fffe28b03b): TS0601_thermostat_3 - TuYa Thermostatic radiator valve (EndDevice)
+info  2025-12-26 19:17:54: R003 (0xa4c1389b82055bd6): WHD02 - TuYa Wall switch module (Router)
+info  2025-12-26 19:17:54: X002 (0x14b457fffe6c11f3): E1744 - IKEA SYMFONISK sound controller (EndDevice)
+info  2025-12-26 19:17:54: X003 (0x040d84fffeac3a17): E2001/E2002 - IKEA STYRBAR remote control (EndDevice)
+info  2025-12-26 19:17:54: T002 (0x9035eafffe747dfa): TS0601_thermostat_3 - TuYa Thermostatic radiator valve (EndDevice)
+info  2025-12-26 19:17:54: T003 (0x003c84fffe21fa74): TS0601_thermostat_3 - TuYa Thermostatic radiator valve (EndDevice)
+info  2025-12-26 19:17:54: T004 (0x9035eafffe7124d5): TS0601_thermostat_3 - TuYa Thermostatic radiator valve (EndDevice)
+info  2025-12-26 19:17:54: T005 (0x003c84fffe21fdbd): TS0601_thermostat_3 - TuYa Thermostatic radiator valve (EndDevice)
+info  2025-12-26 19:17:54: X010 (0x287681fffe51e031): E2112 - IKEA Vindstyrka air quality and humidity sensor (Router)
+warn  2025-12-26 19:17:54: `permit_join` set to  `true` in configuration.yaml.
+warn  2025-12-26 19:17:54: Allowing new devices to join.
+warn  2025-12-26 19:17:54: Set `permit_join` to `false` once you joined all devices.
+info  2025-12-26 19:17:54: Zigbee: allowing new devices to join.
+info  2025-12-26 19:17:54: Connecting to MQTT server at mqtt://mqtt
+info  2025-12-26 19:17:55: Connected to MQTT server
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload '{"state":"online"}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/901/availability', payload '{"state":"online"}'
+info  2025-12-26 19:17:55: Started frontend on port 0.0.0.0:8080
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/P001', payload '{"battery":100,"device_temperature":17,"illuminance":0,"illuminance_lux":0,"linkquality":96,"occupancy":false,"power_outage_count":93,"voltage":3075}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/A001', payload '{"brightness":229,"color_mode":"xy","color_temp":327,"linkquality":81,"state":"ON"}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/R002', payload '{"consumption":31.12,"current":0.28,"device_temperature":44,"energy":31.12,"linkquality":48,"power":63.11,"power_outage_count":61,"state_l1":"ON","state_l2":"ON","voltage":225.13}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/A003', payload '{"brightness":1,"color":{"x":0.6184,"y":0.369},"color_mode":"xy","linkquality":3,"state":"ON","update":{"installed_version":318805362,"latest_version":587753009,"state":"available"}}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/A004', payload '{"brightness":1,"color":{"x":0.458,"y":0.41},"color_mode":"color_temp","linkquality":6,"state":"ON","update":{"installed_version":318767730,"latest_version":587753009,"state":"available"}}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/A005', payload '{"brightness":1,"color":{"x":0.458,"y":0.41},"color_mode":"color_temp","linkquality":33,"state":"ON","update":{"installed_version":318767730,"latest_version":587753009,"state":"available"}}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/I004', payload '{"battery":90,"device_temperature":28,"linkquality":57,"power_outage_count":25,"voltage":2985}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/A006', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":60,"state":"OFF"}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/A007', payload '{"brightness":254,"color_mode":"color_temp","color_temp":327,"linkquality":63,"state":"OFF"}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/I005', payload '{"battery":100,"device_temperature":21,"linkquality":48,"power_outage_count":20,"voltage":3025}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/C001', payload '{"battery":100,"current":0,"device_temperature":17,"linkquality":63,"power":12260,"power_outage_count":617,"side":3,"voltage":3025}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":6,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/X002', payload '{"battery":60,"linkquality":51,"update":{"installed_version":553797169,"latest_version":604241925,"state":"available"}}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/X003', payload '{"battery":100,"linkquality":42,"update":{"installed_version":65572,"latest_version":33816598,"state":"available"}}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/T004', payload '{"current_heating_setpoint":15}'
+info  2025-12-26 19:17:55: MQTT publish: topic 'zigbee2mqtt/X010', payload '{"humidity":52,"linkquality":60,"pm25":18,"temperature":18,"voc_index":75}'
+info  2025-12-26 19:17:55: Zigbee2MQTT started!
+info  2025-12-26 19:18:08: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":3,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 19:18:08: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":3,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:46:28: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:46:28: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+error 2025-12-26 21:46:30: Publish 'set' 'state' to 'R003' failed: 'Error: Command 0xa4c1389b82055bd6/1 genOnOff.on({}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (Timeout - 57127 - 1 - 3 - 6 - 11 after 10000ms)'
+error 2025-12-26 21:46:30: No converter available for 'relay' ("R003")
+info  2025-12-26 21:46:42: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:46:42: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:46:55: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:46:55: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:47:00: MQTT publish: topic 'zigbee2mqtt/X010', payload '{"humidity":52,"linkquality":42,"pm25":18,"temperature":17,"voc_index":75}'
+info  2025-12-26 21:47:00: MQTT publish: topic 'zigbee2mqtt/X010', payload '{"humidity":40,"linkquality":45,"pm25":18,"temperature":17,"voc_index":75}'
+info  2025-12-26 21:47:09: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:47:09: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:47:23: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":3,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:47:23: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+error 2025-12-26 21:47:27: Publish 'set' 'state' to 'R003' failed: 'Error: Command 0xa4c1389b82055bd6/1 genOnOff.on({}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (Timeout - 57127 - 1 - 4 - 6 - 11 after 10000ms)'
+error 2025-12-26 21:47:27: No converter available for 'relay' ("R003")
+info  2025-12-26 21:47:36: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:47:36: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:47:50: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:47:50: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":3,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+error 2025-12-26 21:47:55: Publish 'set' 'state' to 'R003' failed: 'Error: Command 0xa4c1389b82055bd6/1 genOnOff.on({}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (Timeout - 57127 - 1 - 5 - 6 - 11 after 10000ms)'
+error 2025-12-26 21:47:55: No converter available for 'relay' ("R003")
+info  2025-12-26 21:48:00: MQTT publish: topic 'zigbee2mqtt/X010', payload '{"humidity":40,"linkquality":45,"pm25":18,"temperature":17,"voc_index":75}'
+info  2025-12-26 21:48:00: MQTT publish: topic 'zigbee2mqtt/X010', payload '{"humidity":40,"linkquality":45,"pm25":18,"temperature":17,"voc_index":75}'
+info  2025-12-26 21:48:00: MQTT publish: topic 'zigbee2mqtt/X010', payload '{"humidity":40,"linkquality":45,"pm25":52,"temperature":17,"voc_index":75}'
+info  2025-12-26 21:48:00: MQTT publish: topic 'zigbee2mqtt/X010', payload '{"humidity":40,"linkquality":45,"pm25":52,"temperature":17,"voc_index":87}'
+info  2025-12-26 21:48:04: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:48:04: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:48:15: MQTT publish: topic 'zigbee2mqtt/A004', payload '{"brightness":1,"color":{"x":0.458,"y":0.41},"color_mode":"color_temp","linkquality":54,"state":"ON","update":{"installed_version":318767730,"latest_version":587753009,"state":"available"}}'
+info  2025-12-26 21:48:15: Update available for 'A004'
+info  2025-12-26 21:48:17: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:48:18: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+error 2025-12-26 21:48:25: Publish 'set' 'state' to 'R003' failed: 'Error: Command 0xa4c1389b82055bd6/1 genOnOff.on({}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (Timeout - 57127 - 1 - 7 - 6 - 11 after 10000ms)'
+error 2025-12-26 21:48:25: No converter available for 'relay' ("R003")
+info  2025-12-26 21:48:31: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:48:31: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+error 2025-12-26 21:48:43: Publish 'set' 'state' to 'R003' failed: 'Error: Command 0xa4c1389b82055bd6/1 genOnOff.on({}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (SREQ '--> ZDO - extRouteDisc - {"dstAddr":57127,"options":0,"radius":30}' failed with status '(0xc7: NWK_TABLE_FULL)' (expected '(0x00: SUCCESS)'))'
+error 2025-12-26 21:48:43: No converter available for 'relay' ("R003")
+info  2025-12-26 21:48:45: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:48:45: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":3,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:48:46: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:48:46: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:48:58: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":0,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:48:58: MQTT publish: topic 'zigbee2mqtt/R003', payload '{"linkquality":3,"power_on_behavior":"previous","state":"ON","switch_type":"toggle"}'
+info  2025-12-26 21:49:00: MQTT publish: topic 'zigbee2mqtt/X010', payload '{"humidity":39,"linkquality":54,"pm25":52,"temperature":17,"voc_index":87}'
+info  2025-12-26 21:49:00: MQTT publish: topic 'zigbee2mqtt/X010', payload '{"humidity":39,"linkquality":54,"pm25":52,"temperature":17,"voc_index":87}'
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
